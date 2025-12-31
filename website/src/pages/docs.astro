@@ -18,6 +18,7 @@ import Layout from '../layouts/Layout.astro';
       <div class="bg-stone-50 rounded-xl p-6 mb-16">
         <h2 class="font-display text-lg font-semibold text-stone-900 mb-4">Contents</h2>
         <ul class="space-y-2 text-stone-600">
+          <li><a href="#nervous-system" class="hover:text-copper transition-colors">→ Nervous System Architecture</a></li>
           <li><a href="#runs-and-steps" class="hover:text-copper transition-colors">→ Runs and Steps</a></li>
           <li><a href="#boomerang-protocol" class="hover:text-copper transition-colors">→ Boomerang Protocol</a></li>
           <li><a href="#role-contracts" class="hover:text-copper transition-colors">→ Role Contracts</a></li>
@@ -25,6 +26,99 @@ import Layout from '../layouts/Layout.astro';
           <li><a href="#parallel-execution" class="hover:text-copper transition-colors">→ Parallel Execution</a></li>
           <li><a href="#task-maps" class="hover:text-copper transition-colors">→ Task Maps</a></li>
         </ul>
+      </div>
+
+      <!-- Nervous System Architecture -->
+      <div id="nervous-system" class="mb-16 scroll-mt-24">
+        <h2 class="font-display text-2xl font-bold text-stone-900 mb-6">Nervous System Architecture</h2>
+        <p class="text-stone-600 mb-8">
+          The framework organizes AI capabilities into four biological layers, each with distinct responsibilities and MCP tool integrations.
+        </p>
+        
+        <!-- Central Layer -->
+        <div class="bg-purple-50 rounded-xl p-6 border border-purple-200 mb-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">🧠</span>
+            <div>
+              <h3 class="font-display text-lg font-semibold text-stone-900">Central Layer: The Brain</h3>
+              <p class="text-sm text-purple-700">High-level cognition and executive function</p>
+            </div>
+          </div>
+          <p class="text-stone-600 mb-4">
+            Goal decomposition, planning, strategic decisions. The Orchestrator coordinates multi-step tasks while Architect and Planner handle system design and task structuring.
+          </p>
+          <div class="text-sm text-stone-500">
+            Modes: Orchestrator • Architect • Planner • Deep Research • Ask
+          </div>
+        </div>
+        
+        <!-- Somatic Layer -->
+        <div class="bg-amber-50 rounded-xl p-6 border border-amber-200 mb-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">🦾</span>
+            <div>
+              <h3 class="font-display text-lg font-semibold text-stone-900">Somatic Layer: The Body</h3>
+              <p class="text-sm text-amber-700">Voluntary motor control and action execution</p>
+            </div>
+          </div>
+          <p class="text-stone-600 mb-4">
+            Deliberate actions requiring cognitive attention. The <a href="https://github.com/Mnehmos/mnehmos.ooda.mcp" class="text-amber-700 hover:text-amber-900 underline">OODA MCP</a> provides 62+ tools for file operations, screen capture, keyboard/mouse automation, and browser control.
+          </p>
+          <div class="text-sm text-stone-500">
+            Modes: Code • Red Phase • Green Phase • Blue Phase
+          </div>
+        </div>
+        
+        <!-- Autonomic Layer -->
+        <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 mb-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">💭</span>
+            <div>
+              <h3 class="font-display text-lg font-semibold text-stone-900">Autonomic Layer: The Subconscious</h3>
+              <p class="text-sm text-blue-700">Background processes that maintain state without conscious attention</p>
+            </div>
+          </div>
+          <p class="text-stone-600 mb-4">
+            Memory persistence, agent coordination, semantic retrieval. The <a href="https://github.com/Mnehmos/mnehmos.synch.mcp" class="text-blue-700 hover:text-blue-900 underline">Synch MCP</a> handles cross-session context while <a href="https://github.com/Mnehmos/mnehmos.index-foundry.mcp" class="text-blue-700 hover:text-blue-900 underline">Index Foundry</a> provides RAG pipelines for semantic memory.
+          </p>
+          <div class="grid md:grid-cols-2 gap-4 mt-4">
+            <a href="https://github.com/Mnehmos/mnehmos.synch.mcp" class="bg-white rounded-lg p-4 border border-blue-100 hover:border-blue-300 transition-colors">
+              <div class="flex items-center gap-2 mb-2">
+                <span>💾</span>
+                <span class="font-semibold text-stone-900">Synch MCP</span>
+              </div>
+              <p class="text-sm text-stone-600">Memory persistence, agent handoff, locks, bug tracking</p>
+            </a>
+            <a href="https://github.com/Mnehmos/mnehmos.index-foundry.mcp" class="bg-white rounded-lg p-4 border border-blue-100 hover:border-blue-300 transition-colors">
+              <div class="flex items-center gap-2 mb-2">
+                <span>📚</span>
+                <span class="font-semibold text-stone-900">Index Foundry</span>
+              </div>
+              <p class="text-sm text-stone-600">RAG pipelines, document Q&A, semantic search</p>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Reflex Layer -->
+        <div class="bg-red-50 rounded-xl p-6 border border-red-200 mb-6">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-2xl">⚡</span>
+            <div>
+              <h3 class="font-display text-lg font-semibold text-stone-900">Reflex Layer: The Spinal Cord</h3>
+              <p class="text-sm text-red-700">Immediate, pre-cognitive responses</p>
+            </div>
+          </div>
+          <p class="text-stone-600 mb-4">
+            Schema validation that rejects bad inputs before they reach the brain. The <a href="https://github.com/Mnehmos/mnehmos.trace.mcp" class="text-red-700 hover:text-red-900 underline">Trace MCP</a> catches contract violations at edit time, not runtime.
+          </p>
+          <div class="bg-white rounded-lg p-4 border border-red-100">
+            <div class="flex items-center gap-2 mb-2">
+              <span>🔍</span>
+              <span class="font-semibold text-stone-900">Validation Before Execution</span>
+            </div>
+            <p class="text-sm text-stone-600">In combat, soldiers don't think—they react. In code, the reflex layer validates tool inputs, enforces contracts, and rejects malformed requests—all without consuming cognitive resources.</p>
+          </div>
+        </div>
       </div>
 
       <!-- Runs and Steps -->
