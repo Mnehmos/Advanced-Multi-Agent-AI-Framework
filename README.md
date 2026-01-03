@@ -39,7 +39,8 @@ A biological architecture for artificial minds. Sensation, reflex, memory, and a
 │              Memory • Synch MCP • Index Foundry MCP                 │
 │           State persistence, retrieval, agent coordination         │
 ├─────────────────────────────────────────────────────────────────────┤
-│                   REFLEX (SPINAL CORD) - Immediate                  │
+│              REFLEX (SPINAL CORD) - Immediate.                     │
+│                     (UNDER CONSTRUCTION)                            │
 │                Trace MCP • Schema Validation • Contracts            │
 │              Rejects bad inputs before cognition                    │
 └─────────────────────────────────────────────────────────────────────┘
