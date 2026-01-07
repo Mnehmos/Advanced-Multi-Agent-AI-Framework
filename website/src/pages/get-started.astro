@@ -287,13 +287,28 @@ cp mnehmos.multi-agent.framework/templates/copilot/copilot-instructions.md ./.gi
 
 <style>
   .ide-btn {
-    @apply flex flex-col items-center justify-center p-4 sm:p-6 rounded-xl border-2 border-[var(--color-border-default)] bg-[var(--color-bg-surface)] transition-all cursor-pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border: 2px solid var(--color-border-default);
+    background-color: var(--color-bg-surface);
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  @media (min-width: 640px) {
+    .ide-btn {
+      padding: 1.5rem;
+    }
   }
   .ide-btn:hover {
-    @apply border-[var(--color-text-muted)];
+    border-color: var(--color-text-muted);
   }
   .ide-btn.active {
-    @apply border-[var(--color-brand-primary)] bg-[var(--color-brand-primary)]/10;
+    border-color: var(--color-brand-primary);
+    background-color: color-mix(in srgb, var(--color-brand-primary) 10%, transparent);
   }
   .ide-instructions.hidden {
     display: none;
