@@ -2,254 +2,337 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Get Started">
-  <section class="py-20">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="text-center mb-16">
-        <h1 class="font-display text-4xl lg:text-5xl font-bold text-stone-900 mb-6">
-          Get Started
-        </h1>
-        <p class="text-xl text-stone-600">
-          Set up the multi-agent framework in your development environment in minutes.
-        </p>
+<Layout title="Get Started | Agentic Nervous System">
+  <section class="py-12 sm:py-16 md:py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6">
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-text-primary)] mb-4 sm:mb-6">
+        Get Started
+      </h1>
+      <p class="text-lg sm:text-xl text-[var(--color-text-secondary)] mb-8 sm:mb-12">
+        Set up the Agentic Nervous System in your AI-assisted IDE in under 5 minutes.
+      </p>
+      
+      <!-- Step 1: Choose Your IDE -->
+      <div class="mb-8 sm:mb-12">
+        <div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 bg-[var(--color-brand-primary)] rounded-full flex items-center justify-center text-white font-bold">1</div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-[var(--color-text-primary)]">Choose Your IDE</h2>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4">
+          <button class="ide-btn active" data-ide="roo">
+            <span class="text-2xl sm:text-3xl mb-2">🦘</span>
+            <span class="font-semibold text-sm sm:text-base">Roo Code</span>
+          </button>
+          <button class="ide-btn" data-ide="claude">
+            <span class="text-2xl sm:text-3xl mb-2">⚡</span>
+            <span class="font-semibold text-sm sm:text-base">Claude Code</span>
+          </button>
+          <button class="ide-btn" data-ide="cursor">
+            <span class="text-2xl sm:text-3xl mb-2">🎯</span>
+            <span class="font-semibold text-sm sm:text-base">Cursor</span>
+          </button>
+          <button class="ide-btn" data-ide="copilot">
+            <span class="text-2xl sm:text-3xl mb-2">🤖</span>
+            <span class="font-semibold text-sm sm:text-base">Copilot</span>
+          </button>
+        </div>
       </div>
-
-      <!-- Step 1 -->
-      <div class="mb-16">
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-10 h-10 bg-copper text-white rounded-full flex items-center justify-center font-display font-bold text-lg">1</div>
-          <h2 class="font-display text-2xl font-bold text-stone-900">Clone the Repository</h2>
+      
+      <!-- Step 2: Install Files -->
+      <div class="mb-8 sm:mb-12">
+        <div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 bg-[var(--color-brand-primary)] rounded-full flex items-center justify-center text-white font-bold">2</div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-[var(--color-text-primary)]">Install Template Files</h2>
         </div>
-        <div class="bg-stone-900 rounded-xl p-6 overflow-x-auto">
-          <pre class="text-stone-300 text-sm"><code>git clone https://github.com/Mnehmos/mnehmos.multi-agent.framework.git
-cd mnehmos.multi-agent.framework</code></pre>
-        </div>
-      </div>
-
-      <!-- Step 2 -->
-      <div class="mb-16">
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-10 h-10 bg-copper text-white rounded-full flex items-center justify-center font-display font-bold text-lg">2</div>
-          <h2 class="font-display text-2xl font-bold text-stone-900">Choose Your IDE</h2>
-        </div>
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="bg-white rounded-xl border border-stone-200 p-6">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="text-2xl">🦘</span>
-              <h3 class="font-display text-lg font-semibold text-stone-900">Roo Code</h3>
-            </div>
-            <ol class="space-y-3 text-sm text-stone-600">
-              <li class="flex gap-2">
-                <span class="text-copper font-semibold">1.</span>
-                Copy <code class="bg-stone-100 px-1 rounded">templates/custom_modes.yaml</code> to <code class="bg-stone-100 px-1 rounded">.roo/</code>
+        
+        <!-- Roo Code Instructions -->
+        <div id="roo-instructions" class="ide-instructions">
+          <div class="bg-[var(--color-bg-surface)] rounded-xl border border-[var(--color-border-default)] p-5 sm:p-6 mb-4 sm:mb-6">
+            <h3 class="font-semibold text-[var(--color-text-primary)] mb-3 sm:mb-4 text-sm sm:text-base">Required Files</h3>
+            <ul class="space-y-2 sm:space-y-3">
+              <li class="flex items-start gap-2 sm:gap-3 text-sm sm:text-base">
+                <span class="text-[var(--color-brand-primary)]">📄</span>
+                <div>
+                  <code class="text-xs sm:text-sm bg-[var(--color-bg-elevated)] px-2 py-1 rounded">.roomodes</code>
+                  <span class="text-[var(--color-text-secondary)]"> - Mode definitions</span>
+                </div>
               </li>
-              <li class="flex gap-2">
-                <span class="text-copper font-semibold">2.</span>
-                Add custom instructions from <code class="bg-stone-100 px-1 rounded">templates/custom-instructions-for-all-modes.md</code>
+              <li class="flex items-start gap-2 sm:gap-3 text-sm sm:text-base">
+                <span class="text-[var(--color-brand-primary)]">📄</span>
+                <div>
+                  <code class="text-xs sm:text-sm bg-[var(--color-bg-elevated)] px-2 py-1 rounded">.roo/rules-*</code>
+                  <span class="text-[var(--color-text-secondary)]"> - Mode-specific rules</span>
+                </div>
               </li>
-              <li class="flex gap-2">
-                <span class="text-copper font-semibold">3.</span>
-                Configure MCP servers in settings
+              <li class="flex items-start gap-2 sm:gap-3 text-sm sm:text-base">
+                <span class="text-[var(--color-brand-primary)]">📄</span>
+                <div>
+                  <code class="text-xs sm:text-sm bg-[var(--color-bg-elevated)] px-2 py-1 rounded">Custom Instructions</code>
+                  <span class="text-[var(--color-text-secondary)]"> - Paste in settings</span>
+                </div>
               </li>
-            </ol>
+            </ul>
           </div>
           
-          <div class="bg-white rounded-xl border border-stone-200 p-6">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="text-2xl">⚡</span>
-              <h3 class="font-display text-lg font-semibold text-stone-900">Claude Code</h3>
+          <div class="bg-[var(--color-footer-bg)] rounded-xl p-4 sm:p-6 overflow-x-auto">
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <span class="text-[var(--color-footer-text)] text-xs sm:text-sm font-medium">Terminal</span>
+              <button class="copy-btn text-xs text-[var(--color-brand-primary)] hover:text-[var(--color-brand-light)]">Copy</button>
             </div>
-            <ol class="space-y-3 text-sm text-stone-600">
-              <li class="flex gap-2">
-                <span class="text-copper font-semibold">1.</span>
-                Copy <code class="bg-stone-100 px-1 rounded">templates/claude-code/CLAUDE.md</code> to project root
+            <pre class="text-[var(--color-footer-text)] text-xs sm:text-sm"><code># Clone the repository
+git clone https://github.com/Mnehmos/mnehmos.multi-agent.framework.git
+
+# Copy templates to your project
+cp -r mnehmos.multi-agent.framework/templates/.roomodes ./
+cp -r mnehmos.multi-agent.framework/templates/.roo ./</code></pre>
+          </div>
+        </div>
+        
+        <!-- Claude Code Instructions -->
+        <div id="claude-instructions" class="ide-instructions hidden">
+          <div class="bg-[var(--color-bg-surface)] rounded-xl border border-[var(--color-border-default)] p-5 sm:p-6 mb-4 sm:mb-6">
+            <h3 class="font-semibold text-[var(--color-text-primary)] mb-3 sm:mb-4 text-sm sm:text-base">Required Files</h3>
+            <ul class="space-y-2 sm:space-y-3">
+              <li class="flex items-start gap-2 sm:gap-3 text-sm sm:text-base">
+                <span class="text-[var(--color-brand-primary)]">📄</span>
+                <div>
+                  <code class="text-xs sm:text-sm bg-[var(--color-bg-elevated)] px-2 py-1 rounded">CLAUDE.md</code>
+                  <span class="text-[var(--color-text-secondary)]"> - Project instructions</span>
+                </div>
               </li>
-              <li class="flex gap-2">
-                <span class="text-copper font-semibold">2.</span>
-                Add MCP servers to <code class="bg-stone-100 px-1 rounded">claude_desktop_config.json</code>
-              </li>
-              <li class="flex gap-2">
-                <span class="text-copper font-semibold">3.</span>
-                Run <code class="bg-stone-100 px-1 rounded">claude</code> in your project directory
-              </li>
-            </ol>
+            </ul>
           </div>
           
-          <div class="bg-white rounded-xl border border-stone-200 p-6">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="text-2xl">🎯</span>
-              <h3 class="font-display text-lg font-semibold text-stone-900">Cursor</h3>
+          <div class="bg-[var(--color-footer-bg)] rounded-xl p-4 sm:p-6 overflow-x-auto">
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <span class="text-[var(--color-footer-text)] text-xs sm:text-sm font-medium">Terminal</span>
+              <button class="copy-btn text-xs text-[var(--color-brand-primary)] hover:text-[var(--color-brand-light)]">Copy</button>
             </div>
-            <ol class="space-y-3 text-sm text-stone-600">
-              <li class="flex gap-2">
-                <span class="text-copper font-semibold">1.</span>
-                Copy <code class="bg-stone-100 px-1 rounded">templates/cursor/rules/_global.mdc</code> to <code class="bg-stone-100 px-1 rounded">.cursor/rules/</code>
+            <pre class="text-[var(--color-footer-text)] text-xs sm:text-sm"><code># Clone the repository
+git clone https://github.com/Mnehmos/mnehmos.multi-agent.framework.git
+
+# Copy CLAUDE.md to your project root
+cp mnehmos.multi-agent.framework/templates/claude-code/CLAUDE.md ./</code></pre>
+          </div>
+        </div>
+        
+        <!-- Cursor Instructions -->
+        <div id="cursor-instructions" class="ide-instructions hidden">
+          <div class="bg-[var(--color-bg-surface)] rounded-xl border border-[var(--color-border-default)] p-5 sm:p-6 mb-4 sm:mb-6">
+            <h3 class="font-semibold text-[var(--color-text-primary)] mb-3 sm:mb-4 text-sm sm:text-base">Required Files</h3>
+            <ul class="space-y-2 sm:space-y-3">
+              <li class="flex items-start gap-2 sm:gap-3 text-sm sm:text-base">
+                <span class="text-[var(--color-brand-primary)]">📄</span>
+                <div>
+                  <code class="text-xs sm:text-sm bg-[var(--color-bg-elevated)] px-2 py-1 rounded">.cursorrules</code>
+                  <span class="text-[var(--color-text-secondary)]"> - Cursor AI rules</span>
+                </div>
               </li>
-              <li class="flex gap-2">
-                <span class="text-copper font-semibold">2.</span>
-                Configure agent instructions in Cursor settings
-              </li>
-              <li class="flex gap-2">
-                <span class="text-copper font-semibold">3.</span>
-                Use @agent mentions to switch modes
-              </li>
-            </ol>
+            </ul>
           </div>
           
-          <div class="bg-white rounded-xl border border-stone-200 p-6">
-            <div class="flex items-center gap-3 mb-4">
-              <span class="text-2xl">🤖</span>
-              <h3 class="font-display text-lg font-semibold text-stone-900">GitHub Copilot</h3>
+          <div class="bg-[var(--color-footer-bg)] rounded-xl p-4 sm:p-6 overflow-x-auto">
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <span class="text-[var(--color-footer-text)] text-xs sm:text-sm font-medium">Terminal</span>
+              <button class="copy-btn text-xs text-[var(--color-brand-primary)] hover:text-[var(--color-brand-light)]">Copy</button>
             </div>
-            <ol class="space-y-3 text-sm text-stone-600">
-              <li class="flex gap-2">
-                <span class="text-copper font-semibold">1.</span>
-                Copy <code class="bg-stone-100 px-1 rounded">templates/copilot/copilot-instructions.md</code> to <code class="bg-stone-100 px-1 rounded">.github/</code>
+            <pre class="text-[var(--color-footer-text)] text-xs sm:text-sm"><code># Clone the repository
+git clone https://github.com/Mnehmos/mnehmos.multi-agent.framework.git
+
+# Copy .cursorrules to your project root
+cp mnehmos.multi-agent.framework/templates/cursor/rules/_global.mdc ./.cursorrules</code></pre>
+          </div>
+        </div>
+        
+        <!-- Copilot Instructions -->
+        <div id="copilot-instructions" class="ide-instructions hidden">
+          <div class="bg-[var(--color-bg-surface)] rounded-xl border border-[var(--color-border-default)] p-5 sm:p-6 mb-4 sm:mb-6">
+            <h3 class="font-semibold text-[var(--color-text-primary)] mb-3 sm:mb-4 text-sm sm:text-base">Required Files</h3>
+            <ul class="space-y-2 sm:space-y-3">
+              <li class="flex items-start gap-2 sm:gap-3 text-sm sm:text-base">
+                <span class="text-[var(--color-brand-primary)]">📄</span>
+                <div>
+                  <code class="text-xs sm:text-sm bg-[var(--color-bg-elevated)] px-2 py-1 rounded">.github/copilot-instructions.md</code>
+                  <span class="text-[var(--color-text-secondary)]"> - Copilot instructions</span>
+                </div>
               </li>
-              <li class="flex gap-2">
-                <span class="text-copper font-semibold">2.</span>
-                Reference instructions in Copilot Chat
-              </li>
-              <li class="flex gap-2">
-                <span class="text-copper font-semibold">3.</span>
-                Use slash commands to orchestrate work
-              </li>
-            </ol>
+            </ul>
+          </div>
+          
+          <div class="bg-[var(--color-footer-bg)] rounded-xl p-4 sm:p-6 overflow-x-auto">
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <span class="text-[var(--color-footer-text)] text-xs sm:text-sm font-medium">Terminal</span>
+              <button class="copy-btn text-xs text-[var(--color-brand-primary)] hover:text-[var(--color-brand-light)]">Copy</button>
+            </div>
+            <pre class="text-[var(--color-footer-text)] text-xs sm:text-sm"><code># Clone the repository
+git clone https://github.com/Mnehmos/mnehmos.multi-agent.framework.git
+
+# Create .github directory and copy instructions
+mkdir -p .github
+cp mnehmos.multi-agent.framework/templates/copilot/copilot-instructions.md ./.github/</code></pre>
           </div>
         </div>
       </div>
-
-      <!-- Step 3 -->
-      <div class="mb-16">
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-10 h-10 bg-copper text-white rounded-full flex items-center justify-center font-display font-bold text-lg">3</div>
-          <h2 class="font-display text-2xl font-bold text-stone-900">Add MCP Tools (Optional)</h2>
+      
+      <!-- Step 3: Optional MCP Tools -->
+      <div class="mb-8 sm:mb-12">
+        <div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 bg-[var(--color-text-muted)] rounded-full flex items-center justify-center text-white font-bold">3</div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-[var(--color-text-primary)]">Add MCP Tools (Optional)</h2>
         </div>
-        <p class="text-stone-600 mb-6">
-          Extend agent capabilities with Model Context Protocol servers. Clone and build the tools you need:
+        
+        <p class="text-[var(--color-text-secondary)] mb-4 sm:mb-6 text-sm sm:text-base">
+          The framework works without tools (Tier 0). Add MCP tools progressively as needed:
         </p>
-        <div class="bg-stone-900 rounded-xl p-6 overflow-x-auto mb-6">
-          <pre class="text-stone-300 text-sm"><code># Clone MCP tools
-git clone https://github.com/Mnehmos/mnehmos.ooda.mcp.git
-git clone https://github.com/Mnehmos/mnehmos.synch.mcp.git
-git clone https://github.com/Mnehmos/mnehmos.index-foundry.mcp.git
-
-# Build each tool
-cd mnehmos.ooda.mcp && npm install && npm run build
-cd ../mnehmos.synch.mcp && npm install && npm run build
-cd ../mnehmos.index-foundry.mcp && npm install && npm run build</code></pre>
-        </div>
-        <p class="text-stone-600 mb-4">
-          Add to your MCP configuration:
-        </p>
-        <div class="bg-stone-900 rounded-xl p-6 overflow-x-auto">
-          <pre class="text-stone-300 text-sm"><code>{`{
-  "mcpServers": {
-    "ooda": {
-      "command": "node",
-      "args": ["/path/to/mnehmos.ooda.mcp/dist/index.js"]
-    },
-    "synch": {
-      "command": "node",
-      "args": ["/path/to/mnehmos.synch.mcp/dist/index.js"]
-    },
-    "index-foundry": {
-      "command": "node",
-      "args": ["/path/to/mnehmos.index-foundry.mcp/dist/index.js"]
-    }
-  }
-}`}</code></pre>
-        </div>
-      </div>
-
-      <!-- Step 4 -->
-      <div class="mb-16">
-        <div class="flex items-center gap-4 mb-6">
-          <div class="w-10 h-10 bg-copper text-white rounded-full flex items-center justify-center font-display font-bold text-lg">4</div>
-          <h2 class="font-display text-2xl font-bold text-stone-900">Start Your First Task</h2>
-        </div>
-        <p class="text-stone-600 mb-6">
-          Use slash commands to orchestrate work with the multi-agent framework:
-        </p>
-        <div class="space-y-4">
-          <div class="bg-white rounded-xl border border-stone-200 p-6">
-            <div class="flex items-center gap-4 mb-3">
-              <code class="text-copper font-semibold text-lg">/plan</code>
-              <span class="text-stone-600">Create a Task Map for your objective</span>
+        
+        <div class="grid gap-3 sm:gap-4 sm:grid-cols-2">
+          <a href="https://github.com/Mnehmos/mnehmos.ooda.mcp" class="block bg-[var(--color-layer-somatic)] rounded-xl border border-[var(--color-layer-somatic-border)]/30 p-4 sm:p-5 hover:border-[var(--color-layer-somatic-border)] transition-colors">
+            <div class="flex items-center gap-3 mb-2 sm:mb-3">
+              <span class="text-xl sm:text-2xl">🦾</span>
+              <div>
+                <h3 class="font-semibold text-[var(--color-text-primary)] text-sm sm:text-base">OODA MCP</h3>
+                <span class="text-xs text-amber-600 dark:text-amber-400">Somatic Layer</span>
+              </div>
             </div>
-            <div class="bg-stone-50 rounded-lg p-4 text-sm text-stone-600">
-              <strong>Example:</strong> "/plan Create a REST API for user authentication with JWT tokens"
-            </div>
-          </div>
+            <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">Computer automation, file I/O, browser control</p>
+          </a>
           
-          <div class="bg-white rounded-xl border border-stone-200 p-6">
-            <div class="flex items-center gap-4 mb-3">
-              <code class="text-copper font-semibold text-lg">/scope</code>
-              <span class="text-stone-600">Deep-scope a complex issue before implementation</span>
+          <a href="https://github.com/Mnehmos/mnehmos.synch.mcp" class="block bg-[var(--color-layer-autonomic)] rounded-xl border border-[var(--color-layer-autonomic-border)]/30 p-4 sm:p-5 hover:border-[var(--color-layer-autonomic-border)] transition-colors">
+            <div class="flex items-center gap-3 mb-2 sm:mb-3">
+              <span class="text-xl sm:text-2xl">💭</span>
+              <div>
+                <h3 class="font-semibold text-[var(--color-text-primary)] text-sm sm:text-base">Synch MCP</h3>
+                <span class="text-xs text-blue-600 dark:text-blue-400">Autonomic Layer</span>
+              </div>
             </div>
-            <div class="bg-stone-50 rounded-lg p-4 text-sm text-stone-600">
-              <strong>Example:</strong> "/scope Investigate why database queries are slow under load"
-            </div>
-          </div>
+            <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">Memory persistence, agent handoff, coordination</p>
+          </a>
           
-          <div class="bg-white rounded-xl border border-stone-200 p-6">
-            <div class="flex items-center gap-4 mb-3">
-              <code class="text-copper font-semibold text-lg">/build</code>
-              <span class="text-stone-600">Implement features using TDD workflow</span>
+          <a href="https://github.com/Mnehmos/mnehmos.index-foundry.mcp" class="block bg-[var(--color-layer-autonomic)] rounded-xl border border-[var(--color-layer-autonomic-border)]/30 p-4 sm:p-5 hover:border-[var(--color-layer-autonomic-border)] transition-colors">
+            <div class="flex items-center gap-3 mb-2 sm:mb-3">
+              <span class="text-xl sm:text-2xl">📚</span>
+              <div>
+                <h3 class="font-semibold text-[var(--color-text-primary)] text-sm sm:text-base">Index Foundry</h3>
+                <span class="text-xs text-blue-600 dark:text-blue-400">Autonomic Layer</span>
+              </div>
             </div>
-            <div class="bg-stone-50 rounded-lg p-4 text-sm text-stone-600">
-              <strong>Example:</strong> "/build Add email validation to the signup form"
+            <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">RAG pipelines, semantic search, document Q&A</p>
+          </a>
+          
+          <a href="https://github.com/Mnehmos/mnehmos.trace.mcp" class="block bg-[var(--color-layer-reflex)] rounded-xl border border-[var(--color-layer-reflex-border)]/30 p-4 sm:p-5 hover:border-[var(--color-layer-reflex-border)] transition-colors">
+            <div class="flex items-center gap-3 mb-2 sm:mb-3">
+              <span class="text-xl sm:text-2xl">⚡</span>
+              <div>
+                <h3 class="font-semibold text-[var(--color-text-primary)] text-sm sm:text-base">Trace MCP</h3>
+                <span class="text-xs text-red-600 dark:text-red-400">Reflex Layer</span>
+              </div>
             </div>
-          </div>
+            <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">Schema validation, contract enforcement</p>
+          </a>
         </div>
       </div>
-
-      <!-- TDD Workflow -->
-      <div class="bg-stone-50 rounded-2xl p-8 mb-16">
-        <h2 class="font-display text-2xl font-bold text-stone-900 mb-6">TDD Workflow</h2>
-        <p class="text-stone-600 mb-8">
-          The framework enforces Test-Driven Development with three distinct phases:
-        </p>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="text-center">
-            <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-4 text-2xl">🔴</div>
-            <h3 class="font-semibold text-stone-900 mb-2">Red Phase</h3>
-            <p class="text-sm text-stone-600">Write failing tests that define expected behavior. Tests must fail with clear messages.</p>
-          </div>
-          <div class="text-center">
-            <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4 text-2xl">🟢</div>
-            <h3 class="font-semibold text-stone-900 mb-2">Green Phase</h3>
-            <p class="text-sm text-stone-600">Write minimal code to make tests pass. Focus on correctness, not elegance.</p>
-          </div>
-          <div class="text-center">
-            <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4 text-2xl">🔵</div>
-            <h3 class="font-semibold text-stone-900 mb-2">Blue Phase</h3>
-            <p class="text-sm text-stone-600">Refactor for quality while keeping tests green. Improve structure and performance.</p>
-          </div>
+      
+      <!-- Step 4: Start Using -->
+      <div class="mb-8 sm:mb-12">
+        <div class="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">✓</div>
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-[var(--color-text-primary)]">Start Using the Framework</h2>
+        </div>
+        
+        <div class="bg-[var(--color-success)]/10 rounded-xl border border-[var(--color-success)]/30 p-5 sm:p-6">
+          <h3 class="font-semibold text-[var(--color-text-primary)] mb-3 sm:mb-4 text-sm sm:text-base">Try these commands:</h3>
+          <ul class="space-y-2 sm:space-y-3 text-sm sm:text-base">
+            <li class="flex items-start gap-2 sm:gap-3">
+              <span class="text-[var(--color-success)]">→</span>
+              <span class="text-[var(--color-text-secondary)]">"Switch to <strong>Orchestrator</strong> mode and plan a new feature"</span>
+            </li>
+            <li class="flex items-start gap-2 sm:gap-3">
+              <span class="text-[var(--color-success)]">→</span>
+              <span class="text-[var(--color-text-secondary)]">"Use <strong>Architect</strong> to design the API contracts"</span>
+            </li>
+            <li class="flex items-start gap-2 sm:gap-3">
+              <span class="text-[var(--color-success)]">→</span>
+              <span class="text-[var(--color-text-secondary)]">"Run TDD cycle: <strong>Red Phase</strong> → <strong>Green Phase</strong> → <strong>Blue Phase</strong>"</span>
+            </li>
+          </ul>
         </div>
       </div>
-
+      
       <!-- Next Steps -->
-      <div class="text-center">
-        <h2 class="font-display text-2xl font-bold text-stone-900 mb-6">Next Steps</h2>
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="/mnehmos.multi-agent.framework/team" class="inline-flex items-center justify-center gap-2 bg-stone-900 text-stone-50 px-6 py-3 rounded-lg font-semibold hover:bg-stone-800 transition-colors">
-            Meet the Agents
+      <div class="bg-[var(--color-bg-surface)] rounded-2xl border border-[var(--color-border-default)] p-6 sm:p-8">
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-[var(--color-text-primary)] mb-4 sm:mb-6">Next Steps</h2>
+        <div class="grid gap-4 sm:gap-6 sm:grid-cols-2">
+          <a href="/mnehmos.multi-agent.framework/team" class="block p-4 sm:p-5 bg-[var(--color-bg-elevated)] rounded-xl hover:bg-[var(--color-bg-muted)] transition-colors">
+            <h3 class="font-semibold text-[var(--color-text-primary)] mb-1 sm:mb-2 text-sm sm:text-base">Meet the Team</h3>
+            <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">Learn about all 13 specialized modes and their capabilities.</p>
           </a>
-          <a href="/mnehmos.multi-agent.framework/tools" class="inline-flex items-center justify-center gap-2 border-2 border-stone-300 text-stone-700 px-6 py-3 rounded-lg font-semibold hover:border-stone-400 transition-colors">
-            Explore MCP Tools
+          <a href="/mnehmos.multi-agent.framework/docs" class="block p-4 sm:p-5 bg-[var(--color-bg-elevated)] rounded-xl hover:bg-[var(--color-bg-muted)] transition-colors">
+            <h3 class="font-semibold text-[var(--color-text-primary)] mb-1 sm:mb-2 text-sm sm:text-base">Read the Docs</h3>
+            <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">Deep dive into contracts, protocols, and best practices.</p>
           </a>
-          <a href="/mnehmos.multi-agent.framework/docs" class="inline-flex items-center justify-center gap-2 border-2 border-stone-300 text-stone-700 px-6 py-3 rounded-lg font-semibold hover:border-stone-400 transition-colors">
-            Read the Docs
+          <a href="/mnehmos.multi-agent.framework/tools" class="block p-4 sm:p-5 bg-[var(--color-bg-elevated)] rounded-xl hover:bg-[var(--color-bg-muted)] transition-colors">
+            <h3 class="font-semibold text-[var(--color-text-primary)] mb-1 sm:mb-2 text-sm sm:text-base">Explore MCP Tools</h3>
+            <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">Extend capabilities with the MCP tool ecosystem.</p>
           </a>
-        </div>
-        <div class="mt-12 pt-8 border-t border-stone-200">
-          <p class="text-stone-600 mb-4">Find this useful? Support the project!</p>
-          <a href="https://buymeacoffee.com/Mnehmos" class="bmc-button">
-            <span class="bmc-icon">☕</span> Buy Me a Coffee
+          <a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework" class="block p-4 sm:p-5 bg-[var(--color-bg-elevated)] rounded-xl hover:bg-[var(--color-bg-muted)] transition-colors">
+            <h3 class="font-semibold text-[var(--color-text-primary)] mb-1 sm:mb-2 text-sm sm:text-base">View Source</h3>
+            <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">Star the repo and contribute to the project.</p>
           </a>
         </div>
       </div>
     </div>
   </section>
 </Layout>
+
+<style>
+  .ide-btn {
+    @apply flex flex-col items-center justify-center p-4 sm:p-6 rounded-xl border-2 border-[var(--color-border-default)] bg-[var(--color-bg-surface)] transition-all cursor-pointer;
+  }
+  .ide-btn:hover {
+    @apply border-[var(--color-text-muted)];
+  }
+  .ide-btn.active {
+    @apply border-[var(--color-brand-primary)] bg-[var(--color-brand-primary)]/10;
+  }
+  .ide-instructions.hidden {
+    display: none;
+  }
+</style>
+
+<script>
+  // IDE tab switching
+  const ideBtns = document.querySelectorAll('.ide-btn');
+  const instructions = document.querySelectorAll('.ide-instructions');
+  
+  ideBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const ide = btn.getAttribute('data-ide');
+      
+      // Update button states
+      ideBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      // Show/hide instructions
+      instructions.forEach(inst => {
+        inst.classList.add('hidden');
+      });
+      document.getElementById(`${ide}-instructions`)?.classList.remove('hidden');
+    });
+  });
+  
+  // Copy button functionality
+  const copyBtns = document.querySelectorAll('.copy-btn');
+  copyBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const codeBlock = btn.closest('.bg-\\[var\\(--color-footer-bg\\)\\]')?.querySelector('code');
+      if (codeBlock) {
+        navigator.clipboard.writeText(codeBlock.textContent || '');
+        btn.textContent = 'Copied!';
+        setTimeout(() => {
+          btn.textContent = 'Copy';
+        }, 2000);
+      }
+    });
+  });
+</script>

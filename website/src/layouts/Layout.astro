@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 interface Props {
   title: string;
   description?: string;
@@ -17,6 +19,16 @@ const { title, description = "A structured, production-ready multi-agent framewo
     <meta name="generator" content={Astro.generator} />
     <title>{title} | Multi-Agent Framework</title>
     
+    <!-- Flash prevention script - must be in head, before body renders -->
+    <script is:inline>
+      (function() {
+        const saved = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const theme = saved || (prefersDark ? 'dark' : 'light');
+        document.documentElement.setAttribute('data-theme', theme);
+      })();
+    </script>
+    
     <!-- Open Graph -->
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
@@ -27,11 +39,11 @@ const { title, description = "A structured, production-ready multi-agent framewo
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   </head>
-  <body class="bg-stone-50 text-stone-800 antialiased">
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-stone-50/90 backdrop-blur-sm border-b border-stone-200">
-      <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="/mnehmos.multi-agent.framework/" class="flex items-center gap-3 font-display font-bold text-xl text-stone-900 hover:text-copper transition-colors group">
-          <svg class="w-8 h-8 header-logo" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <body class="bg-[var(--color-bg-base)] text-[var(--color-text-primary)] antialiased">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[var(--color-nav-bg)] backdrop-blur-sm border-b border-[var(--color-nav-border)]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
+        <a href="/mnehmos.multi-agent.framework/" class="flex items-center gap-2 sm:gap-3 font-display font-bold text-lg sm:text-xl text-[var(--color-text-primary)] hover:text-[var(--color-brand-primary)] transition-colors group">
+          <svg class="w-7 h-7 sm:w-8 sm:h-8 header-logo" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <linearGradient id="headerCopperGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                 <stop offset="0%" style="stop-color:#D4956A"/>
@@ -59,131 +71,281 @@ const { title, description = "A structured, production-ready multi-agent framewo
             </g>
             <circle cx="16" cy="16" r="1.5" fill="#FCD34D" opacity="0.8" class="logo-center"/>
           </svg>
-          <span>mnehmos<span class="text-copper">.multi-agent</span></span>
+          <span class="hidden sm:inline">mnehmos<span class="text-[var(--color-brand-primary)]">.multi-agent</span></span>
+          <span class="sm:hidden">mnehmos</span>
         </a>
-        <div class="hidden md:flex items-center gap-8">
-          <a href="/mnehmos.multi-agent.framework/team" class="text-stone-600 hover:text-stone-900 transition-colors">Team</a>
-          <a href="/mnehmos.multi-agent.framework/tools" class="text-copper hover:text-copper-light transition-colors font-medium">Tools</a>
-          <a href="/mnehmos.multi-agent.framework/templates" class="text-stone-600 hover:text-stone-900 transition-colors">Templates</a>
-          <a href="/mnehmos.multi-agent.framework/docs" class="text-stone-600 hover:text-stone-900 transition-colors">Docs</a>
+        
+        <div class="hidden md:flex items-center gap-6 lg:gap-8">
+          <a href="/mnehmos.multi-agent.framework/team" class="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">Team</a>
+          <a href="/mnehmos.multi-agent.framework/tools" class="text-[var(--color-brand-primary)] hover:text-[var(--color-brand-light)] transition-colors font-medium">Tools</a>
+          <a href="/mnehmos.multi-agent.framework/templates" class="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">Templates</a>
+          <a href="/mnehmos.multi-agent.framework/docs" class="text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">Docs</a>
         </div>
-        <a href="/mnehmos.multi-agent.framework/get-started" class="hidden md:inline-flex items-center gap-2 bg-stone-900 text-stone-50 px-4 py-2 rounded-lg font-medium hover:bg-stone-800 transition-colors">
-          Get Started
-        </a>
-        <!-- Mobile menu button -->
-        <button id="mobile-menu-btn" class="md:hidden p-2 text-stone-600">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-          </svg>
-        </button>
+        
+        <div class="flex items-center gap-2">
+          <!-- Theme Toggle Button -->
+          <button 
+            id="theme-toggle" 
+            class="theme-toggle" 
+            aria-label="Toggle dark mode"
+            title="Toggle dark mode"
+          >
+            <!-- Sun icon (shown in light mode) -->
+            <svg class="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+            </svg>
+            <!-- Moon icon (shown in dark mode) -->
+            <svg class="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+            </svg>
+          </button>
+          
+          <a href="/mnehmos.multi-agent.framework/get-started" class="hidden md:inline-flex items-center gap-2 bg-[var(--color-text-primary)] text-[var(--color-text-inverse)] px-3 lg:px-4 py-2 rounded-lg font-medium hover:opacity-90 transition-opacity text-sm lg:text-base">
+            Get Started
+          </a>
+          
+          <!-- Hamburger Menu Button -->
+          <button
+            id="mobile-menu-btn"
+            class="hamburger md:hidden"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <span class="hamburger-box">
+              <span class="hamburger-line hamburger-line--top"></span>
+              <span class="hamburger-line hamburger-line--middle"></span>
+              <span class="hamburger-line hamburger-line--bottom"></span>
+            </span>
+          </button>
+        </div>
       </div>
+      
       <!-- Mobile menu -->
-      <div id="mobile-menu" class="hidden md:hidden border-t border-stone-200 bg-stone-50">
-        <div class="px-6 py-4 space-y-4">
-          <a href="/mnehmos.multi-agent.framework/team" class="block text-stone-600 hover:text-stone-900">Team</a>
-          <a href="/mnehmos.multi-agent.framework/tools" class="block text-copper hover:text-copper-light font-medium">Tools</a>
-          <a href="/mnehmos.multi-agent.framework/templates" class="block text-stone-600 hover:text-stone-900">Templates</a>
-          <a href="/mnehmos.multi-agent.framework/docs" class="block text-stone-600 hover:text-stone-900">Docs</a>
-          <a href="/mnehmos.multi-agent.framework/get-started" class="block bg-stone-900 text-stone-50 px-4 py-2 rounded-lg font-medium text-center">Get Started</a>
+      <div 
+        id="mobile-menu" 
+        class="md:hidden border-t border-[var(--color-border-default)] bg-[var(--color-bg-surface)]"
+        role="navigation"
+        aria-label="Mobile navigation"
+      >
+        <div class="px-4 sm:px-6 py-4 space-y-3">
+          <a href="/mnehmos.multi-agent.framework/team" class="block py-2 text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">Team</a>
+          <a href="/mnehmos.multi-agent.framework/tools" class="block py-2 text-[var(--color-brand-primary)] hover:text-[var(--color-brand-light)] font-medium transition-colors">Tools</a>
+          <a href="/mnehmos.multi-agent.framework/templates" class="block py-2 text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">Templates</a>
+          <a href="/mnehmos.multi-agent.framework/docs" class="block py-2 text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">Docs</a>
+          <a href="/mnehmos.multi-agent.framework/get-started" class="block bg-[var(--color-text-primary)] text-[var(--color-text-inverse)] px-4 py-3 rounded-lg font-medium text-center mt-4">Get Started</a>
         </div>
       </div>
     </nav>
     
-    <main class="pt-20">
+    <main class="pt-16 sm:pt-20">
       <slot />
     </main>
     
-    <footer class="bg-stone-900 text-stone-300 py-16 mt-24">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="grid md:grid-cols-4 gap-12">
+    <footer class="bg-[var(--color-footer-bg)] text-[var(--color-footer-text)] py-12 sm:py-16 mt-16 sm:mt-24">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid gap-8 sm:gap-12 md:grid-cols-4">
           <div class="md:col-span-2">
-            <span class="font-display font-bold text-2xl text-stone-50">mnehmos<span class="text-copper">.multi-agent</span></span>
-            <p class="mt-4 text-stone-400 max-w-md">
+            <span class="font-display font-bold text-xl sm:text-2xl text-[var(--color-text-inverse)]">mnehmos<span class="text-[var(--color-brand-primary)]">.multi-agent</span></span>
+            <p class="mt-4 text-[var(--color-text-muted)] max-w-md text-sm sm:text-base">
               A structured, production-ready multi-agent framework for coordinating specialized AI modes. Part of the Mnehmos ecosystem of AI development tools.
             </p>
-            <a href="https://mnehmos.github.io/vario.automation.website/" class="inline-block mt-4 text-copper hover:text-copper-light transition-colors">
+            <a href="https://mnehmos.github.io/vario.automation.website/" class="inline-block mt-4 text-[var(--color-brand-primary)] hover:text-[var(--color-brand-light)] transition-colors text-sm sm:text-base">
               Built by Vario Automation →
             </a>
           </div>
           <div>
-            <h4 class="font-semibold text-stone-50 mb-4">Framework</h4>
-            <ul class="space-y-2 text-stone-400">
-              <li><a href="/mnehmos.multi-agent.framework/team" class="hover:text-stone-200 transition-colors">Meet the Team</a></li>
-              <li><a href="/mnehmos.multi-agent.framework/templates" class="hover:text-stone-200 transition-colors">Templates</a></li>
-              <li><a href="/mnehmos.multi-agent.framework/docs" class="hover:text-stone-200 transition-colors">Documentation</a></li>
+            <h4 class="font-semibold text-[var(--color-text-inverse)] mb-4">Framework</h4>
+            <ul class="space-y-2 text-[var(--color-text-muted)] text-sm sm:text-base">
+              <li><a href="/mnehmos.multi-agent.framework/team" class="hover:text-[var(--color-text-secondary)] transition-colors">Meet the Team</a></li>
+              <li><a href="/mnehmos.multi-agent.framework/templates" class="hover:text-[var(--color-text-secondary)] transition-colors">Templates</a></li>
+              <li><a href="/mnehmos.multi-agent.framework/docs" class="hover:text-[var(--color-text-secondary)] transition-colors">Documentation</a></li>
             </ul>
           </div>
           <div>
-            <h4 class="font-semibold text-stone-50 mb-4">Connect</h4>
-            <ul class="space-y-2 text-stone-400">
-              <li><a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework" class="hover:text-stone-200 transition-colors">GitHub</a></li>
-              <li><a href="/mnehmos.multi-agent.framework/tools" class="hover:text-stone-200 transition-colors">MCP Tools</a></li>
-              <li><a href="https://mnehmos.github.io/mnehmos.prompts.research/" class="hover:text-stone-200 transition-colors">Prompts Research</a></li>
+            <h4 class="font-semibold text-[var(--color-text-inverse)] mb-4">Connect</h4>
+            <ul class="space-y-2 text-[var(--color-text-muted)] text-sm sm:text-base">
+              <li><a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework" class="hover:text-[var(--color-text-secondary)] transition-colors">GitHub</a></li>
+              <li><a href="/mnehmos.multi-agent.framework/tools" class="hover:text-[var(--color-text-secondary)] transition-colors">MCP Tools</a></li>
+              <li><a href="https://mnehmos.github.io/mnehmos.prompts.research/" class="hover:text-[var(--color-text-secondary)] transition-colors">Prompts Research</a></li>
               <li><a href="https://buymeacoffee.com/Mnehmos" class="bmc-link"><span class="bmc-icon">☕</span> Buy Me a Coffee</a></li>
             </ul>
           </div>
         </div>
-        <div class="mt-12 pt-8 border-t border-stone-800 text-stone-500 text-sm">
+        <div class="mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-[var(--color-border-muted)] text-[var(--color-text-muted)] text-xs sm:text-sm">
           <p>© 2024 Mnehmos Multi-Agent Framework. MIT License.</p>
         </div>
       </div>
     </footer>
     
     <script>
+      // ===========================================
+      // THEME TOGGLE
+      // ===========================================
+      const themeToggle = document.getElementById('theme-toggle');
+      
+      function setTheme(theme: string, withTransition = true) {
+        if (withTransition) {
+          document.documentElement.setAttribute('data-theme-transitioning', '');
+          setTimeout(() => {
+            document.documentElement.removeAttribute('data-theme-transitioning');
+          }, 200);
+        }
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+      }
+      
+      function toggleTheme() {
+        const current = document.documentElement.getAttribute('data-theme');
+        const next = current === 'dark' ? 'light' : 'dark';
+        setTheme(next);
+      }
+      
+      themeToggle?.addEventListener('click', toggleTheme);
+      
+      // Listen for system preference changes
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {
+          setTheme(e.matches ? 'dark' : 'light');
+        }
+      });
+      
+      // ===========================================
+      // HAMBURGER MENU
+      // ===========================================
       const menuBtn = document.getElementById('mobile-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
-      menuBtn?.addEventListener('click', () => {
-        mobileMenu?.classList.toggle('hidden');
+      
+      // Get focusable elements within menu
+      function getFocusableElements(): HTMLElement[] {
+        if (!mobileMenu) return [];
+        return Array.from(mobileMenu.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        ));
+      }
+      
+      function openMenu() {
+        if (!menuBtn || !mobileMenu) return;
+        
+        menuBtn.setAttribute('aria-expanded', 'true');
+        menuBtn.setAttribute('aria-label', 'Close menu');
+        mobileMenu.setAttribute('data-open', 'true');
+        
+        // Focus first menu item after animation
+        setTimeout(() => {
+          const focusables = getFocusableElements();
+          if (focusables.length > 0) {
+            focusables[0].focus();
+          }
+        }, 100);
+      }
+      
+      function closeMenu(returnFocus = true) {
+        if (!menuBtn || !mobileMenu) return;
+        
+        menuBtn.setAttribute('aria-expanded', 'false');
+        menuBtn.setAttribute('aria-label', 'Open menu');
+        mobileMenu.setAttribute('data-open', 'false');
+        
+        if (returnFocus) {
+          menuBtn.focus();
+        }
+      }
+      
+      function toggleMenu() {
+        const isOpen = menuBtn?.getAttribute('aria-expanded') === 'true';
+        if (isOpen) {
+          closeMenu();
+        } else {
+          openMenu();
+        }
+      }
+      
+      // Menu button click
+      menuBtn?.addEventListener('click', toggleMenu);
+      
+      // Escape key to close
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && menuBtn?.getAttribute('aria-expanded') === 'true') {
+          closeMenu();
+        }
+      });
+      
+      // Click outside to close
+      document.addEventListener('click', (e) => {
+        if (menuBtn?.getAttribute('aria-expanded') !== 'true') return;
+        
+        const target = e.target as HTMLElement;
+        if (!menuBtn?.contains(target) && !mobileMenu?.contains(target)) {
+          closeMenu(false);
+        }
+      });
+      
+      // Focus trap within menu
+      mobileMenu?.addEventListener('keydown', (e) => {
+        if (e.key !== 'Tab') return;
+        if (menuBtn?.getAttribute('aria-expanded') !== 'true') return;
+        
+        const focusables = getFocusableElements();
+        if (focusables.length === 0) return;
+        
+        const firstFocusable = focusables[0];
+        const lastFocusable = focusables[focusables.length - 1];
+        
+        if (e.shiftKey) {
+          // Shift+Tab from first element -> focus hamburger button
+          if (document.activeElement === firstFocusable) {
+            e.preventDefault();
+            menuBtn?.focus();
+          }
+        } else {
+          // Tab from last element -> focus hamburger button
+          if (document.activeElement === lastFocusable) {
+            e.preventDefault();
+            menuBtn?.focus();
+          }
+        }
+      });
+      
+      // Tab from hamburger button when menu is open
+      menuBtn?.addEventListener('keydown', (e) => {
+        if (e.key !== 'Tab') return;
+        if (menuBtn.getAttribute('aria-expanded') !== 'true') return;
+        
+        const focusables = getFocusableElements();
+        if (focusables.length === 0) return;
+        
+        if (e.shiftKey) {
+          // Shift+Tab from hamburger -> focus last menu item
+          e.preventDefault();
+          focusables[focusables.length - 1].focus();
+        } else {
+          // Tab from hamburger -> focus first menu item
+          e.preventDefault();
+          focusables[0].focus();
+        }
+      });
+      
+      // Close menu on window resize (if switching to desktop)
+      let resizeTimer: ReturnType<typeof setTimeout>;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          if (window.innerWidth >= 768 && menuBtn?.getAttribute('aria-expanded') === 'true') {
+            closeMenu(false);
+          }
+        }, 100);
       });
     </script>
   </body>
 </html>
 
 <style is:global>
-  @import '../styles/global.css';
-  
-  :root {
-    --copper: #B87333;
-    --copper-light: #D4956A;
-  }
-  
   body {
     font-family: 'Inter', sans-serif;
   }
   
   .font-display {
     font-family: 'Space Grotesk', sans-serif;
-  }
-  
-  .text-copper {
-    color: var(--copper);
-  }
-  
-  .bg-copper {
-    background-color: var(--copper);
-  }
-  
-  .border-copper {
-    border-color: var(--copper);
-  }
-  
-  .hover\:text-copper:hover {
-    color: var(--copper);
-  }
-  
-  .hover\:text-copper-light:hover {
-    color: var(--copper-light);
-  }
-  
-  .hover\:bg-copper:hover {
-    background-color: var(--copper);
-  }
-  
-  .hover\:border-copper:hover {
-    border-color: var(--copper);
-  }
-  
-  .focus\:ring-copper:focus {
-    --tw-ring-color: var(--copper);
   }
 </style>

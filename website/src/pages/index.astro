@@ -4,43 +4,43 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Agentic Nervous System - Multi-Agent AI Framework">
   <!-- Hero Section -->
-  <section class="py-20 lg:py-32">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
+  <section class="py-12 sm:py-16 md:py-20 lg:py-32">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid gap-8 lg:gap-12 lg:grid-cols-2 items-center">
         <div>
-          <h1 class="font-display text-4xl lg:text-5xl xl:text-6xl font-bold text-stone-900 leading-tight">
+          <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[var(--color-text-primary)] leading-tight">
             Your LLM is a brain in a jar.<br/>
-            <span class="text-copper">Give it a nervous system.</span>
+            <span class="text-[var(--color-brand-primary)]">Give it a nervous system.</span>
           </h1>
-          <p class="mt-6 text-xl text-stone-600 leading-relaxed">
+          <p class="mt-4 sm:mt-6 text-lg sm:text-xl text-[var(--color-text-secondary)] leading-relaxed">
             A biological architecture for artificial minds. Sensation, reflex, memory, and action—organized into coherent loops that turn chatbots into organisms.
           </p>
-          <div class="mt-8 flex flex-col sm:flex-row gap-4">
-            <a href="/mnehmos.multi-agent.framework/get-started" class="inline-flex items-center justify-center gap-2 bg-stone-900 text-stone-50 px-6 py-3 rounded-lg font-semibold hover:bg-stone-800 transition-colors">
+          <div class="mt-6 sm:mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <a href="/mnehmos.multi-agent.framework/get-started" class="inline-flex items-center justify-center gap-2 bg-[var(--color-text-primary)] text-[var(--color-text-inverse)] px-5 sm:px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition-opacity">
               Get Started
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
             </a>
-            <a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework" class="inline-flex items-center justify-center gap-2 border-2 border-stone-300 text-stone-700 px-6 py-3 rounded-lg font-semibold hover:border-stone-400 transition-colors">
+            <a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework" class="inline-flex items-center justify-center gap-2 border-2 border-[var(--color-border-strong)] text-[var(--color-text-secondary)] px-5 sm:px-6 py-3 rounded-lg font-semibold hover:border-[var(--color-text-muted)] transition-colors">
               View on GitHub
             </a>
           </div>
-          <div class="mt-12 flex flex-wrap gap-6 text-sm text-stone-500">
+          <div class="mt-8 sm:mt-12 flex flex-wrap gap-4 sm:gap-6 text-xs sm:text-sm text-[var(--color-text-muted)]">
             <span class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-copper" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-4 h-4 text-[var(--color-brand-primary)]" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
               4 Nervous System Layers
             </span>
             <span class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-copper" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-4 h-4 text-[var(--color-brand-primary)]" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
               13 Specialized Modes
             </span>
             <span class="flex items-center gap-2">
-              <svg class="w-4 h-4 text-copper" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-4 h-4 text-[var(--color-brand-primary)]" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
               5 MCP Tools
@@ -49,58 +49,58 @@ import Layout from '../layouts/Layout.astro';
         </div>
         
         <!-- Nervous System Diagram -->
-        <div class="bg-white rounded-2xl border border-stone-200 p-8 shadow-sm">
-          <div class="text-xs uppercase tracking-wide text-stone-400 mb-6">The Agentic Nervous System</div>
+        <div class="bg-[var(--color-bg-surface)] rounded-2xl border border-[var(--color-border-default)] p-6 sm:p-8 shadow-sm">
+          <div class="text-xs uppercase tracking-wide text-[var(--color-text-muted)] mb-4 sm:mb-6">The Agentic Nervous System</div>
           <div class="space-y-3">
-            <div class="bg-purple-50 rounded-lg p-4 border-l-4 border-purple-400">
+            <div class="bg-[var(--color-layer-central)] rounded-lg p-3 sm:p-4 border-l-4 border-[var(--color-layer-central-border)]">
               <div class="flex items-center gap-3">
-                <span class="text-xl">🧠</span>
+                <span class="text-lg sm:text-xl">🧠</span>
                 <div>
-                  <div class="font-semibold text-stone-900">CENTRAL (Brain)</div>
-                  <div class="text-sm text-stone-600">Cognition & Planning</div>
+                  <div class="font-semibold text-[var(--color-text-primary)] text-sm sm:text-base">CENTRAL (Brain)</div>
+                  <div class="text-xs sm:text-sm text-[var(--color-text-secondary)]">Cognition & Planning</div>
                 </div>
               </div>
-              <div class="mt-2 text-xs text-stone-500">Orchestrator • Architect • Planner • Ask</div>
+              <div class="mt-2 text-xs text-[var(--color-text-muted)]">Orchestrator • Architect • Planner • Ask</div>
             </div>
             
-            <div class="ml-4 flex items-center gap-2 text-stone-300">
+            <div class="ml-4 flex items-center gap-2 text-[var(--color-text-muted)]">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
               </svg>
               <span class="text-xs">Motor commands ↓ Sensory input ↑</span>
             </div>
             
-            <div class="bg-amber-50 rounded-lg p-4 border-l-4 border-amber-400">
+            <div class="bg-[var(--color-layer-somatic)] rounded-lg p-3 sm:p-4 border-l-4 border-[var(--color-layer-somatic-border)]">
               <div class="flex items-center gap-3">
-                <span class="text-xl">🦾</span>
+                <span class="text-lg sm:text-xl">🦾</span>
                 <div>
-                  <div class="font-semibold text-stone-900">SOMATIC (Body)</div>
-                  <div class="text-sm text-stone-600">Voluntary Action</div>
+                  <div class="font-semibold text-[var(--color-text-primary)] text-sm sm:text-base">SOMATIC (Body)</div>
+                  <div class="text-xs sm:text-sm text-[var(--color-text-secondary)]">Voluntary Action</div>
                 </div>
               </div>
-              <div class="mt-2 text-xs text-stone-500">Red Phase • Green Phase • Blue Phase • Code</div>
+              <div class="mt-2 text-xs text-[var(--color-text-muted)]">Red Phase • Green Phase • Blue Phase • Code</div>
             </div>
             
-            <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-blue-400">
+            <div class="bg-[var(--color-layer-autonomic)] rounded-lg p-3 sm:p-4 border-l-4 border-[var(--color-layer-autonomic-border)]">
               <div class="flex items-center gap-3">
-                <span class="text-xl">💭</span>
+                <span class="text-lg sm:text-xl">💭</span>
                 <div>
-                  <div class="font-semibold text-stone-900">AUTONOMIC (Subconscious)</div>
-                  <div class="text-sm text-stone-600">Background Processing</div>
+                  <div class="font-semibold text-[var(--color-text-primary)] text-sm sm:text-base">AUTONOMIC (Subconscious)</div>
+                  <div class="text-xs sm:text-sm text-[var(--color-text-secondary)]">Background Processing</div>
                 </div>
               </div>
-              <div class="mt-2 text-xs text-stone-500">Memory • Synch MCP • Index Foundry</div>
+              <div class="mt-2 text-xs text-[var(--color-text-muted)]">Memory • Synch MCP • Index Foundry</div>
             </div>
             
-            <div class="bg-red-50 rounded-lg p-4 border-l-4 border-red-400">
+            <div class="bg-[var(--color-layer-reflex)] rounded-lg p-3 sm:p-4 border-l-4 border-[var(--color-layer-reflex-border)]">
               <div class="flex items-center gap-3">
-                <span class="text-xl">⚡</span>
+                <span class="text-lg sm:text-xl">⚡</span>
                 <div>
-                  <div class="font-semibold text-stone-900">REFLEX (Spinal Cord)</div>
-                  <div class="text-sm text-stone-600">Immediate Validation</div>
+                  <div class="font-semibold text-[var(--color-text-primary)] text-sm sm:text-base">REFLEX (Spinal Cord)</div>
+                  <div class="text-xs sm:text-sm text-[var(--color-text-secondary)]">Immediate Validation</div>
                 </div>
               </div>
-              <div class="mt-2 text-xs text-stone-500">Trace MCP • Schema Validation • Contracts</div>
+              <div class="mt-2 text-xs text-[var(--color-text-muted)]">Trace MCP • Schema Validation • Contracts</div>
             </div>
           </div>
         </div>
@@ -109,63 +109,63 @@ import Layout from '../layouts/Layout.astro';
   </section>
   
   <!-- The Problem / Solution -->
-  <section class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-12">
-        <div class="bg-stone-50 rounded-xl p-8">
-          <div class="text-red-600 font-medium text-sm uppercase tracking-wide mb-3">The Problem</div>
-          <h3 class="font-display text-2xl font-semibold text-stone-900 mb-4">LLMs are chatbots, not agents</h3>
-          <ul class="space-y-3 text-stone-600">
+  <section class="py-12 sm:py-16 md:py-20 bg-[var(--color-bg-surface)]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid gap-6 sm:gap-8 md:gap-12 md:grid-cols-2">
+        <div class="bg-[var(--color-bg-base)] rounded-xl p-6 sm:p-8">
+          <div class="text-[var(--color-error)] font-medium text-xs sm:text-sm uppercase tracking-wide mb-3">The Problem</div>
+          <h3 class="font-display text-xl sm:text-2xl font-semibold text-[var(--color-text-primary)] mb-4">LLMs are chatbots, not agents</h3>
+          <ul class="space-y-3 text-[var(--color-text-secondary)] text-sm sm:text-base">
             <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-red-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-[var(--color-error)] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
               </svg>
               High intelligence, zero agency
             </li>
             <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-red-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-[var(--color-error)] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
               </svg>
               No persistent memory between sessions
             </li>
             <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-red-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-[var(--color-error)] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
               </svg>
               Tools are just sticks to poke with
             </li>
             <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-red-400 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-[var(--color-error)] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
               </svg>
               No coordination between capabilities
             </li>
           </ul>
         </div>
-        <div class="bg-green-50 rounded-xl p-8">
-          <div class="text-green-600 font-medium text-sm uppercase tracking-wide mb-3">The Solution</div>
-          <h3 class="font-display text-2xl font-semibold text-stone-900 mb-4">A nervous system architecture</h3>
-          <ul class="space-y-3 text-stone-600">
+        <div class="bg-[var(--color-success)]/10 rounded-xl p-6 sm:p-8">
+          <div class="text-[var(--color-success)] font-medium text-xs sm:text-sm uppercase tracking-wide mb-3">The Solution</div>
+          <h3 class="font-display text-xl sm:text-2xl font-semibold text-[var(--color-text-primary)] mb-4">A nervous system architecture</h3>
+          <ul class="space-y-3 text-[var(--color-text-secondary)] text-sm sm:text-base">
             <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-[var(--color-success)] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
               Closed feedback loops of action and sensation
             </li>
             <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-[var(--color-success)] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
               Autonomic background state management
             </li>
             <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-[var(--color-success)] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
               Reflex validation before cognition
             </li>
             <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <svg class="w-5 h-5 text-[var(--color-success)] mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
                 <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
               </svg>
               Specialized modes with clear contracts
@@ -177,36 +177,36 @@ import Layout from '../layouts/Layout.astro';
   </section>
   
   <!-- Agent Categories -->
-  <section class="py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="font-display text-3xl font-bold text-stone-900 text-center mb-16">
+  <section class="py-12 sm:py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-[var(--color-text-primary)] text-center mb-10 sm:mb-16">
         Meet the Team
       </h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-purple-50 rounded-xl p-8 border-t-4 border-purple-400">
-          <div class="text-purple-600 font-medium text-sm uppercase tracking-wide mb-3">Central Layer</div>
-          <h3 class="font-display text-xl font-semibold text-stone-900 mb-4">Planning & Architecture</h3>
-          <ul class="space-y-2 text-stone-600">
+      <div class="grid gap-6 sm:gap-8 md:grid-cols-3">
+        <div class="bg-[var(--color-layer-central)] rounded-xl p-6 sm:p-8 border-t-4 border-[var(--color-layer-central-border)]">
+          <div class="text-purple-600 dark:text-purple-400 font-medium text-xs sm:text-sm uppercase tracking-wide mb-3">Central Layer</div>
+          <h3 class="font-display text-lg sm:text-xl font-semibold text-[var(--color-text-primary)] mb-4">Planning & Architecture</h3>
+          <ul class="space-y-2 text-[var(--color-text-secondary)] text-sm sm:text-base">
             <li>🔄 Orchestrator - Task coordination</li>
             <li>🏛️ Architect - System design & ADRs</li>
             <li>📋 Planner - Task maps & backlogs</li>
             <li>🔎 Deep Research - Analysis & research</li>
           </ul>
         </div>
-        <div class="bg-amber-50 rounded-xl p-8 border-t-4 border-amber-400">
-          <div class="text-amber-600 font-medium text-sm uppercase tracking-wide mb-3">Somatic Layer</div>
-          <h3 class="font-display text-xl font-semibold text-stone-900 mb-4">TDD Development Cycle</h3>
-          <ul class="space-y-2 text-stone-600">
+        <div class="bg-[var(--color-layer-somatic)] rounded-xl p-6 sm:p-8 border-t-4 border-[var(--color-layer-somatic-border)]">
+          <div class="text-amber-600 dark:text-amber-400 font-medium text-xs sm:text-sm uppercase tracking-wide mb-3">Somatic Layer</div>
+          <h3 class="font-display text-lg sm:text-xl font-semibold text-[var(--color-text-primary)] mb-4">TDD Development Cycle</h3>
+          <ul class="space-y-2 text-[var(--color-text-secondary)] text-sm sm:text-base">
             <li>🔴 Red Phase - Write failing tests</li>
             <li>🟢 Green Phase - Implement to pass</li>
             <li>🔵 Blue Phase - Refactor & polish</li>
             <li>💻 Code - Complex implementation</li>
           </ul>
         </div>
-        <div class="bg-blue-50 rounded-xl p-8 border-t-4 border-blue-400">
-          <div class="text-blue-600 font-medium text-sm uppercase tracking-wide mb-3">Autonomic Layer</div>
-          <h3 class="font-display text-xl font-semibold text-stone-900 mb-4">Quality & Knowledge</h3>
-          <ul class="space-y-2 text-stone-600">
+        <div class="bg-[var(--color-layer-autonomic)] rounded-xl p-6 sm:p-8 border-t-4 border-[var(--color-layer-autonomic-border)]">
+          <div class="text-blue-600 dark:text-blue-400 font-medium text-xs sm:text-sm uppercase tracking-wide mb-3">Autonomic Layer</div>
+          <h3 class="font-display text-lg sm:text-xl font-semibold text-[var(--color-text-primary)] mb-4">Quality & Knowledge</h3>
+          <ul class="space-y-2 text-[var(--color-text-secondary)] text-sm sm:text-base">
             <li>🐛 Debug - Root cause analysis</li>
             <li>📁 Memory - Documentation</li>
             <li>❓ Ask - Clarification & research</li>
@@ -214,8 +214,8 @@ import Layout from '../layouts/Layout.astro';
           </ul>
         </div>
       </div>
-      <div class="mt-8 text-center">
-        <a href="/mnehmos.multi-agent.framework/team" class="inline-flex items-center gap-2 text-copper hover:text-copper-light font-medium transition-colors">
+      <div class="mt-6 sm:mt-8 text-center">
+        <a href="/mnehmos.multi-agent.framework/team" class="inline-flex items-center gap-2 text-[var(--color-brand-primary)] hover:text-[var(--color-brand-light)] font-medium transition-colors">
           View all 13 agents
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -226,74 +226,74 @@ import Layout from '../layouts/Layout.astro';
   </section>
   
   <!-- MCP Ecosystem -->
-  <section class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="font-display text-3xl font-bold text-stone-900 text-center mb-4">
+  <section class="py-12 sm:py-16 md:py-20 bg-[var(--color-bg-surface)]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-[var(--color-text-primary)] text-center mb-3 sm:mb-4">
         MCP Ecosystem
       </h2>
-      <p class="text-stone-600 text-center max-w-2xl mx-auto mb-16">
+      <p class="text-[var(--color-text-secondary)] text-center max-w-2xl mx-auto mb-10 sm:mb-16 text-sm sm:text-base">
         Each tool maps to a nervous system layer. Start with Central (toolless), add Somatic, then Autonomic and Reflex as needed.
       </p>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <a href="https://github.com/Mnehmos/mnehmos.ooda.mcp" class="group bg-amber-50 rounded-xl border border-amber-200 p-6 hover:border-amber-400 hover:shadow-md transition-all">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 bg-amber-200 rounded-xl flex items-center justify-center group-hover:bg-amber-300 transition-colors">
-              <span class="text-2xl">🦾</span>
+      <div class="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="https://github.com/Mnehmos/mnehmos.ooda.mcp" class="group bg-[var(--color-layer-somatic)] rounded-xl border border-[var(--color-layer-somatic-border)]/30 p-5 sm:p-6 hover:border-[var(--color-layer-somatic-border)] hover:shadow-md transition-all">
+          <div class="flex items-center gap-3 mb-3 sm:mb-4">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-[var(--color-layer-somatic-border)]/20 rounded-xl flex items-center justify-center group-hover:bg-[var(--color-layer-somatic-border)]/30 transition-colors">
+              <span class="text-xl sm:text-2xl">🦾</span>
             </div>
-            <div class="text-xs uppercase tracking-wide text-amber-600 font-semibold">Somatic Layer</div>
+            <div class="text-xs uppercase tracking-wide text-amber-600 dark:text-amber-400 font-semibold">Somatic Layer</div>
           </div>
-          <h3 class="font-display text-lg font-semibold text-stone-900 mb-2">OODA MCP</h3>
-          <p class="text-stone-600 text-sm">62 tools for computer automation. File operations, screen capture, keyboard/mouse control, batch processing.</p>
+          <h3 class="font-display text-base sm:text-lg font-semibold text-[var(--color-text-primary)] mb-2">OODA MCP</h3>
+          <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">62 tools for computer automation. File operations, screen capture, keyboard/mouse control, batch processing.</p>
         </a>
         
-        <a href="https://github.com/Mnehmos/mnehmos.synch.mcp" class="group bg-blue-50 rounded-xl border border-blue-200 p-6 hover:border-blue-400 hover:shadow-md transition-all">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 bg-blue-200 rounded-xl flex items-center justify-center group-hover:bg-blue-300 transition-colors">
-              <span class="text-2xl">💭</span>
+        <a href="https://github.com/Mnehmos/mnehmos.synch.mcp" class="group bg-[var(--color-layer-autonomic)] rounded-xl border border-[var(--color-layer-autonomic-border)]/30 p-5 sm:p-6 hover:border-[var(--color-layer-autonomic-border)] hover:shadow-md transition-all">
+          <div class="flex items-center gap-3 mb-3 sm:mb-4">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-[var(--color-layer-autonomic-border)]/20 rounded-xl flex items-center justify-center group-hover:bg-[var(--color-layer-autonomic-border)]/30 transition-colors">
+              <span class="text-xl sm:text-2xl">💭</span>
             </div>
-            <div class="text-xs uppercase tracking-wide text-blue-600 font-semibold">Autonomic Layer</div>
+            <div class="text-xs uppercase tracking-wide text-blue-600 dark:text-blue-400 font-semibold">Autonomic Layer</div>
           </div>
-          <h3 class="font-display text-lg font-semibold text-stone-900 mb-2">Synch MCP</h3>
-          <p class="text-stone-600 text-sm">Memory persistence, agent handoff, locks, bug tracking. Cross-session context that makes agents feel continuous.</p>
+          <h3 class="font-display text-base sm:text-lg font-semibold text-[var(--color-text-primary)] mb-2">Synch MCP</h3>
+          <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">Memory persistence, agent handoff, locks, bug tracking. Cross-session context that makes agents feel continuous.</p>
         </a>
         
-        <a href="https://github.com/Mnehmos/mnehmos.index-foundry.mcp" class="group bg-blue-50 rounded-xl border border-blue-200 p-6 hover:border-blue-400 hover:shadow-md transition-all">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 bg-blue-200 rounded-xl flex items-center justify-center group-hover:bg-blue-300 transition-colors">
-              <span class="text-2xl">📚</span>
+        <a href="https://github.com/Mnehmos/mnehmos.index-foundry.mcp" class="group bg-[var(--color-layer-autonomic)] rounded-xl border border-[var(--color-layer-autonomic-border)]/30 p-5 sm:p-6 hover:border-[var(--color-layer-autonomic-border)] hover:shadow-md transition-all">
+          <div class="flex items-center gap-3 mb-3 sm:mb-4">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-[var(--color-layer-autonomic-border)]/20 rounded-xl flex items-center justify-center group-hover:bg-[var(--color-layer-autonomic-border)]/30 transition-colors">
+              <span class="text-xl sm:text-2xl">📚</span>
             </div>
-            <div class="text-xs uppercase tracking-wide text-blue-600 font-semibold">Autonomic Layer</div>
+            <div class="text-xs uppercase tracking-wide text-blue-600 dark:text-blue-400 font-semibold">Autonomic Layer</div>
           </div>
-          <h3 class="font-display text-lg font-semibold text-stone-900 mb-2">Index Foundry</h3>
-          <p class="text-stone-600 text-sm">RAG pipelines from documents, websites, and code. Semantic memory for document Q&A.</p>
+          <h3 class="font-display text-base sm:text-lg font-semibold text-[var(--color-text-primary)] mb-2">Index Foundry</h3>
+          <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">RAG pipelines from documents, websites, and code. Semantic memory for document Q&A.</p>
         </a>
         
-        <a href="https://github.com/Mnehmos/mnehmos.trace.mcp" class="group bg-red-50 rounded-xl border border-red-200 p-6 hover:border-red-400 hover:shadow-md transition-all">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 bg-red-200 rounded-xl flex items-center justify-center group-hover:bg-red-300 transition-colors">
-              <span class="text-2xl">⚡</span>
+        <a href="https://github.com/Mnehmos/mnehmos.trace.mcp" class="group bg-[var(--color-layer-reflex)] rounded-xl border border-[var(--color-layer-reflex-border)]/30 p-5 sm:p-6 hover:border-[var(--color-layer-reflex-border)] hover:shadow-md transition-all">
+          <div class="flex items-center gap-3 mb-3 sm:mb-4">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-[var(--color-layer-reflex-border)]/20 rounded-xl flex items-center justify-center group-hover:bg-[var(--color-layer-reflex-border)]/30 transition-colors">
+              <span class="text-xl sm:text-2xl">⚡</span>
             </div>
-            <div class="text-xs uppercase tracking-wide text-red-600 font-semibold">Reflex Layer</div>
+            <div class="text-xs uppercase tracking-wide text-red-600 dark:text-red-400 font-semibold">Reflex Layer</div>
           </div>
-          <h3 class="font-display text-lg font-semibold text-stone-900 mb-2">Trace MCP</h3>
-          <p class="text-stone-600 text-sm">Schema validation, contract enforcement, type-safe scaffolding. Catch bugs before runtime.</p>
+          <h3 class="font-display text-base sm:text-lg font-semibold text-[var(--color-text-primary)] mb-2">Trace MCP</h3>
+          <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">Schema validation, contract enforcement, type-safe scaffolding. Catch bugs before runtime.</p>
         </a>
         
-        <a href="https://github.com/Mnehmos/mnehmos.arxiv.mcp" class="group bg-purple-50 rounded-xl border border-purple-200 p-6 hover:border-purple-400 hover:shadow-md transition-all">
-          <div class="flex items-center gap-3 mb-4">
-            <div class="w-12 h-12 bg-purple-200 rounded-xl flex items-center justify-center group-hover:bg-purple-300 transition-colors">
-              <span class="text-2xl">📄</span>
+        <a href="https://github.com/Mnehmos/mnehmos.arxiv.mcp" class="group bg-[var(--color-layer-central)] rounded-xl border border-[var(--color-layer-central-border)]/30 p-5 sm:p-6 hover:border-[var(--color-layer-central-border)] hover:shadow-md transition-all">
+          <div class="flex items-center gap-3 mb-3 sm:mb-4">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-[var(--color-layer-central-border)]/20 rounded-xl flex items-center justify-center group-hover:bg-[var(--color-layer-central-border)]/30 transition-colors">
+              <span class="text-xl sm:text-2xl">📄</span>
             </div>
-            <div class="text-xs uppercase tracking-wide text-purple-600 font-semibold">Central Layer</div>
+            <div class="text-xs uppercase tracking-wide text-purple-600 dark:text-purple-400 font-semibold">Central Layer</div>
           </div>
-          <h3 class="font-display text-lg font-semibold text-stone-900 mb-2">arXiv MCP</h3>
-          <p class="text-stone-600 text-sm">Search and retrieve academic papers. Research-driven development for Deep Research mode.</p>
+          <h3 class="font-display text-base sm:text-lg font-semibold text-[var(--color-text-primary)] mb-2">arXiv MCP</h3>
+          <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">Search and retrieve academic papers. Research-driven development for Deep Research mode.</p>
         </a>
         
-        <a href="/mnehmos.multi-agent.framework/tools" class="group bg-stone-900 rounded-xl p-6 hover:bg-stone-800 transition-all flex items-center justify-center">
+        <a href="/mnehmos.multi-agent.framework/tools" class="group bg-[var(--color-text-primary)] rounded-xl p-5 sm:p-6 hover:opacity-90 transition-all flex items-center justify-center">
           <div class="text-center">
-            <span class="text-stone-50 font-semibold">View all tools</span>
-            <svg class="w-5 h-5 text-stone-50 mx-auto mt-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <span class="text-[var(--color-text-inverse)] font-semibold">View all tools</span>
+            <svg class="w-5 h-5 text-[var(--color-text-inverse)] mx-auto mt-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
             </svg>
           </div>
@@ -303,77 +303,77 @@ import Layout from '../layouts/Layout.astro';
   </section>
   
   <!-- Template Tiers -->
-  <section class="py-20 bg-stone-900 text-stone-50">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="font-display text-3xl font-bold text-center mb-4">
+  <section class="py-12 sm:py-16 md:py-20 bg-[var(--color-footer-bg)] text-[var(--color-text-inverse)]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-center mb-3 sm:mb-4">
         Progressive Enhancement
       </h2>
-      <p class="text-stone-400 text-center max-w-2xl mx-auto mb-16">
+      <p class="text-[var(--color-footer-text)] text-center max-w-2xl mx-auto mb-10 sm:mb-16 text-sm sm:text-base">
         Start toolless, add capabilities as needed. Each tier preserves all contracts from the previous.
       </p>
-      <div class="grid md:grid-cols-5 gap-4">
-      <a href="/mnehmos.multi-agent.framework/templates" class="bg-stone-800 rounded-xl p-6 text-center hover:bg-stone-700 transition-colors">
-        <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 font-bold">0</div>
-        <h3 class="font-semibold mb-2">Toolless</h3>
-        <p class="text-stone-400 text-sm">Modes + contracts only. Works with any IDE.</p>
-      </a>
-      <a href="/mnehmos.multi-agent.framework/templates" class="bg-stone-800 rounded-xl p-6 text-center hover:bg-stone-700 transition-colors">
-        <div class="w-10 h-10 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 font-bold">1</div>
-        <h3 class="font-semibold mb-2">Native</h3>
-        <p class="text-stone-400 text-sm">+ Built-in file I/O and commands</p>
-      </a>
-      <a href="https://github.com/Mnehmos/mnehmos.ooda.mcp" class="bg-stone-800 rounded-xl p-6 text-center hover:bg-stone-700 transition-colors">
-        <div class="w-10 h-10 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-4 font-bold">2</div>
-        <h3 class="font-semibold mb-2">Somatic</h3>
-        <p class="text-stone-400 text-sm">+ OODA MCP (62 tools)</p>
-      </a>
-      <a href="/mnehmos.multi-agent.framework/templates" class="bg-stone-800 rounded-xl p-6 text-center hover:bg-stone-700 transition-colors">
-        <div class="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-4 font-bold">3</div>
-        <h3 class="font-semibold mb-2">Autonomic</h3>
-        <p class="text-stone-400 text-sm">+ Synch + Index Foundry</p>
-      </a>
-      <a href="https://github.com/Mnehmos/mnehmos.trace.mcp" class="bg-stone-800 rounded-xl p-6 text-center hover:bg-stone-700 transition-colors">
-        <div class="w-10 h-10 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4 font-bold">4</div>
-        <h3 class="font-semibold mb-2">Full System</h3>
-        <p class="text-stone-400 text-sm">+ Trace MCP validation</p>
-      </a>
-    </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4">
+        <a href="/mnehmos.multi-agent.framework/templates" class="bg-[var(--color-bg-elevated)] rounded-xl p-4 sm:p-6 text-center hover:bg-[var(--color-bg-muted)] transition-colors">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 font-bold text-sm sm:text-base text-white">0</div>
+          <h3 class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Toolless</h3>
+          <p class="text-[var(--color-footer-text)] text-xs sm:text-sm">Modes + contracts only</p>
+        </a>
+        <a href="/mnehmos.multi-agent.framework/templates" class="bg-[var(--color-bg-elevated)] rounded-xl p-4 sm:p-6 text-center hover:bg-[var(--color-bg-muted)] transition-colors">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 font-bold text-sm sm:text-base text-white">1</div>
+          <h3 class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Native</h3>
+          <p class="text-[var(--color-footer-text)] text-xs sm:text-sm">+ Built-in file I/O</p>
+        </a>
+        <a href="https://github.com/Mnehmos/mnehmos.ooda.mcp" class="bg-[var(--color-bg-elevated)] rounded-xl p-4 sm:p-6 text-center hover:bg-[var(--color-bg-muted)] transition-colors">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 bg-amber-500 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 font-bold text-sm sm:text-base text-white">2</div>
+          <h3 class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Somatic</h3>
+          <p class="text-[var(--color-footer-text)] text-xs sm:text-sm">+ OODA MCP</p>
+        </a>
+        <a href="/mnehmos.multi-agent.framework/templates" class="bg-[var(--color-bg-elevated)] rounded-xl p-4 sm:p-6 text-center hover:bg-[var(--color-bg-muted)] transition-colors">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 bg-blue-500 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 font-bold text-sm sm:text-base text-white">3</div>
+          <h3 class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Autonomic</h3>
+          <p class="text-[var(--color-footer-text)] text-xs sm:text-sm">+ Synch + Index</p>
+        </a>
+        <a href="https://github.com/Mnehmos/mnehmos.trace.mcp" class="bg-[var(--color-bg-elevated)] rounded-xl p-4 sm:p-6 text-center hover:bg-[var(--color-bg-muted)] transition-colors col-span-2 sm:col-span-1">
+          <div class="w-8 h-8 sm:w-10 sm:h-10 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 font-bold text-sm sm:text-base text-white">4</div>
+          <h3 class="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Full System</h3>
+          <p class="text-[var(--color-footer-text)] text-xs sm:text-sm">+ Trace MCP</p>
+        </a>
+      </div>
     </div>
   </section>
   
   <!-- IDE Support -->
-  <section class="py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="font-display text-3xl font-bold text-stone-900 text-center mb-4">
+  <section class="py-12 sm:py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-[var(--color-text-primary)] text-center mb-3 sm:mb-4">
         Works with your IDE
       </h2>
-      <p class="text-stone-600 text-center max-w-2xl mx-auto mb-16">
+      <p class="text-[var(--color-text-secondary)] text-center max-w-2xl mx-auto mb-10 sm:mb-16 text-sm sm:text-base">
         Pre-configured templates for popular AI-assisted development environments.
       </p>
-      <div class="grid md:grid-cols-4 gap-6">
-        <div class="bg-stone-50 rounded-xl p-6 text-center">
-          <div class="text-4xl mb-4">🦘</div>
-          <h3 class="font-display text-lg font-semibold text-stone-900 mb-2">Roo Code</h3>
-          <p class="text-stone-600 text-sm">custom_modes.yaml + .roo/</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        <div class="bg-[var(--color-bg-elevated)] rounded-xl p-5 sm:p-6 text-center">
+          <div class="text-3xl sm:text-4xl mb-3 sm:mb-4">🦘</div>
+          <h3 class="font-display text-base sm:text-lg font-semibold text-[var(--color-text-primary)] mb-2">Roo Code</h3>
+          <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">custom_modes.yaml + .roo/</p>
         </div>
-        <div class="bg-stone-50 rounded-xl p-6 text-center">
-          <div class="text-4xl mb-4">⚡</div>
-          <h3 class="font-display text-lg font-semibold text-stone-900 mb-2">Claude Code</h3>
-          <p class="text-stone-600 text-sm">CLAUDE.md configuration</p>
+        <div class="bg-[var(--color-bg-elevated)] rounded-xl p-5 sm:p-6 text-center">
+          <div class="text-3xl sm:text-4xl mb-3 sm:mb-4">⚡</div>
+          <h3 class="font-display text-base sm:text-lg font-semibold text-[var(--color-text-primary)] mb-2">Claude Code</h3>
+          <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">CLAUDE.md configuration</p>
         </div>
-        <div class="bg-stone-50 rounded-xl p-6 text-center">
-          <div class="text-4xl mb-4">🎯</div>
-          <h3 class="font-display text-lg font-semibold text-stone-900 mb-2">Cursor</h3>
-          <p class="text-stone-600 text-sm">.cursorrules files</p>
+        <div class="bg-[var(--color-bg-elevated)] rounded-xl p-5 sm:p-6 text-center">
+          <div class="text-3xl sm:text-4xl mb-3 sm:mb-4">🎯</div>
+          <h3 class="font-display text-base sm:text-lg font-semibold text-[var(--color-text-primary)] mb-2">Cursor</h3>
+          <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">.cursorrules files</p>
         </div>
-        <div class="bg-stone-50 rounded-xl p-6 text-center">
-          <div class="text-4xl mb-4">🤖</div>
-          <h3 class="font-display text-lg font-semibold text-stone-900 mb-2">Copilot</h3>
-          <p class="text-stone-600 text-sm">copilot-instructions.md</p>
+        <div class="bg-[var(--color-bg-elevated)] rounded-xl p-5 sm:p-6 text-center">
+          <div class="text-3xl sm:text-4xl mb-3 sm:mb-4">🤖</div>
+          <h3 class="font-display text-base sm:text-lg font-semibold text-[var(--color-text-primary)] mb-2">Copilot</h3>
+          <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">copilot-instructions.md</p>
         </div>
       </div>
-      <div class="mt-8 text-center">
-        <a href="/mnehmos.multi-agent.framework/templates" class="inline-flex items-center gap-2 text-copper hover:text-copper-light font-medium transition-colors">
+      <div class="mt-6 sm:mt-8 text-center">
+        <a href="/mnehmos.multi-agent.framework/templates" class="inline-flex items-center gap-2 text-[var(--color-brand-primary)] hover:text-[var(--color-brand-light)] font-medium transition-colors">
           View all templates
           <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -384,27 +384,27 @@ import Layout from '../layouts/Layout.astro';
   </section>
   
   <!-- CTA -->
-  <section class="py-20 bg-stone-900 text-stone-50">
-    <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="font-display text-3xl lg:text-4xl font-bold mb-6">
+  <section class="py-12 sm:py-16 md:py-20 bg-[var(--color-footer-bg)] text-[var(--color-text-inverse)]">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="font-display text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
         Ready to give your AI a nervous system?
       </h2>
-      <p class="text-xl text-stone-400 mb-8">
+      <p class="text-lg sm:text-xl text-[var(--color-footer-text)] mb-6 sm:mb-8">
         Start with the toolless baseline and progressively add capabilities.
       </p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/mnehmos.multi-agent.framework/get-started" class="inline-flex items-center justify-center gap-2 bg-copper text-stone-50 px-8 py-4 rounded-lg font-semibold text-lg hover:opacity-90 transition-opacity">
+      <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+        <a href="/mnehmos.multi-agent.framework/get-started" class="inline-flex items-center justify-center gap-2 bg-[var(--color-brand-primary)] text-[var(--color-text-inverse)] px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:opacity-90 transition-opacity">
           Get Started
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>
         </a>
-        <a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework" class="inline-flex items-center justify-center gap-2 border-2 border-stone-600 text-stone-300 px-8 py-4 rounded-lg font-semibold text-lg hover:border-stone-500 transition-colors">
+        <a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework" class="inline-flex items-center justify-center gap-2 border-2 border-[var(--color-border-strong)] text-[var(--color-footer-text)] px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:border-[var(--color-text-muted)] transition-colors">
           View on GitHub
         </a>
       </div>
-      <div class="mt-8 pt-8 border-t border-stone-800">
-        <p class="text-stone-400 mb-4">Find this useful? Support the project!</p>
+      <div class="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-[var(--color-border-muted)]">
+        <p class="text-[var(--color-footer-text)] mb-4">Find this useful? Support the project!</p>
         <a href="https://buymeacoffee.com/Mnehmos" class="bmc-button">
           <span class="bmc-icon">☕</span> Buy Me a Coffee
         </a>

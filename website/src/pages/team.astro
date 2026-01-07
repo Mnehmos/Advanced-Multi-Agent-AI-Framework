@@ -190,55 +190,55 @@ const categories = ["Strategic", "TDD", "Implementation", "Support", "Quality"];
 ---
 
 <Layout title="Meet the Team">
-  <section class="py-20">
-    <div class="max-w-6xl mx-auto px-6">
-      <div class="text-center mb-16">
-        <h1 class="font-display text-4xl lg:text-5xl font-bold text-stone-900 mb-6">
+  <section class="py-12 sm:py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="text-center mb-10 sm:mb-16">
+        <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-text-primary)] mb-4 sm:mb-6">
           Meet the Team
         </h1>
-        <p class="text-xl text-stone-600 max-w-3xl mx-auto">
+        <p class="text-lg sm:text-xl text-[var(--color-text-secondary)] max-w-3xl mx-auto">
           13 specialized AI agents, each with distinct capabilities and responsibilities. 
           Together, they form a complete development team.
         </p>
       </div>
 
       {categories.map(category => (
-        <div class="mb-16">
-          <h2 class="font-display text-2xl font-bold text-stone-900 mb-8 flex items-center gap-3">
+        <div class="mb-10 sm:mb-16">
+          <h2 class="font-display text-xl sm:text-2xl font-bold text-[var(--color-text-primary)] mb-6 sm:mb-8 flex items-center gap-3">
             <span class={`w-3 h-3 rounded-full ${
               category === 'Strategic' ? 'bg-amber-500' :
               category === 'TDD' ? 'bg-red-500' :
               category === 'Implementation' ? 'bg-purple-500' :
               category === 'Support' ? 'bg-stone-500' :
-              'bg-copper'
+              'bg-[var(--color-brand-primary)]'
             }`}></span>
             {category}
           </h2>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {agents.filter(a => a.category === category).map(agent => (
-              <div class="bg-white rounded-xl border border-stone-200 p-6 hover:border-copper hover:shadow-md transition-all">
-                <div class="flex items-center gap-4 mb-4">
-                  <div class={`w-12 h-12 rounded-xl flex items-center justify-center text-2xl ${
-                    agent.color === 'amber' ? 'bg-amber-100' :
-                    agent.color === 'red' ? 'bg-red-100' :
-                    agent.color === 'green' ? 'bg-green-100' :
-                    agent.color === 'blue' ? 'bg-blue-100' :
-                    agent.color === 'purple' ? 'bg-purple-100' :
-                    agent.color === 'copper' ? 'bg-orange-100' :
-                    'bg-stone-100'
+              <div class="bg-[var(--color-bg-surface)] rounded-xl border border-[var(--color-border-default)] p-5 sm:p-6 hover:border-[var(--color-brand-primary)] hover:shadow-md transition-all">
+                <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div class={`w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center text-xl sm:text-2xl ${
+                    agent.color === 'amber' ? 'bg-amber-100 dark:bg-amber-900/30' :
+                    agent.color === 'red' ? 'bg-red-100 dark:bg-red-900/30' :
+                    agent.color === 'green' ? 'bg-green-100 dark:bg-green-900/30' :
+                    agent.color === 'blue' ? 'bg-blue-100 dark:bg-blue-900/30' :
+                    agent.color === 'purple' ? 'bg-purple-100 dark:bg-purple-900/30' :
+                    agent.color === 'copper' ? 'bg-orange-100 dark:bg-orange-900/30' :
+                    'bg-stone-100 dark:bg-stone-800'
                   }`}>
                     {agent.emoji}
                   </div>
                   <div>
-                    <h3 class="font-display text-lg font-semibold text-stone-900">{agent.name}</h3>
-                    <span class="text-xs text-stone-400 uppercase tracking-wide">{agent.category}</span>
+                    <h3 class="font-display text-base sm:text-lg font-semibold text-[var(--color-text-primary)]">{agent.name}</h3>
+                    <span class="text-xs text-[var(--color-text-muted)] uppercase tracking-wide">{agent.category}</span>
                   </div>
                 </div>
-                <p class="text-stone-600 text-sm mb-4">{agent.description}</p>
+                <p class="text-[var(--color-text-secondary)] text-sm mb-3 sm:mb-4">{agent.description}</p>
                 <ul class="space-y-1">
                   {agent.capabilities.map(cap => (
-                    <li class="flex items-center gap-2 text-sm text-stone-500">
-                      <svg class="w-4 h-4 text-copper shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <li class="flex items-center gap-2 text-xs sm:text-sm text-[var(--color-text-muted)]">
+                      <svg class="w-4 h-4 text-[var(--color-brand-primary)] shrink-0" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
                       </svg>
                       {cap}
@@ -254,38 +254,38 @@ const categories = ["Strategic", "TDD", "Implementation", "Support", "Quality"];
   </section>
 
   <!-- Workflow Section -->
-  <section class="py-20 bg-white">
-    <div class="max-w-6xl mx-auto px-6">
-      <h2 class="font-display text-3xl font-bold text-stone-900 text-center mb-4">
+  <section class="py-12 sm:py-16 md:py-20 bg-[var(--color-bg-surface)]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-[var(--color-text-primary)] text-center mb-3 sm:mb-4">
         How They Work Together
       </h2>
-      <p class="text-stone-600 text-center max-w-2xl mx-auto mb-16">
+      <p class="text-[var(--color-text-secondary)] text-center max-w-2xl mx-auto mb-10 sm:mb-16 text-sm sm:text-base">
         The boomerang protocol ensures tasks flow smoothly between agents with full traceability.
       </p>
-      <div class="bg-stone-50 rounded-2xl p-8">
-        <div class="grid md:grid-cols-4 gap-8">
+      <div class="bg-[var(--color-bg-elevated)] rounded-2xl p-6 sm:p-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
           <div class="text-center">
-            <div class="w-16 h-16 bg-amber-100 rounded-xl flex items-center justify-center mx-auto mb-4 text-2xl">📋</div>
-            <h3 class="font-semibold text-stone-900 mb-2">Planner</h3>
-            <p class="text-sm text-stone-600">Creates Task Map</p>
-            <div class="mt-4 text-copper">↓</div>
+            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 text-xl sm:text-2xl">📋</div>
+            <h3 class="font-semibold text-[var(--color-text-primary)] mb-1 sm:mb-2 text-sm sm:text-base">Planner</h3>
+            <p class="text-xs sm:text-sm text-[var(--color-text-secondary)]">Creates Task Map</p>
+            <div class="mt-3 sm:mt-4 text-[var(--color-brand-primary)]">↓</div>
           </div>
           <div class="text-center">
-            <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4 text-2xl">🔄</div>
-            <h3 class="font-semibold text-stone-900 mb-2">Orchestrator</h3>
-            <p class="text-sm text-stone-600">Delegates tasks</p>
-            <div class="mt-4 text-copper">↓</div>
+            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 text-xl sm:text-2xl">🔄</div>
+            <h3 class="font-semibold text-[var(--color-text-primary)] mb-1 sm:mb-2 text-sm sm:text-base">Orchestrator</h3>
+            <p class="text-xs sm:text-sm text-[var(--color-text-secondary)]">Delegates tasks</p>
+            <div class="mt-3 sm:mt-4 text-[var(--color-brand-primary)]">↓</div>
           </div>
           <div class="text-center">
-            <div class="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center mx-auto mb-4 text-2xl">💻</div>
-            <h3 class="font-semibold text-stone-900 mb-2">Workers</h3>
-            <p class="text-sm text-stone-600">Execute tasks</p>
-            <div class="mt-4 text-copper">↓</div>
+            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 text-xl sm:text-2xl">💻</div>
+            <h3 class="font-semibold text-[var(--color-text-primary)] mb-1 sm:mb-2 text-sm sm:text-base">Workers</h3>
+            <p class="text-xs sm:text-sm text-[var(--color-text-secondary)]">Execute tasks</p>
+            <div class="mt-3 sm:mt-4 text-[var(--color-brand-primary)]">↓</div>
           </div>
           <div class="text-center">
-            <div class="w-16 h-16 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4 text-2xl">✅</div>
-            <h3 class="font-semibold text-stone-900 mb-2">Boomerang</h3>
-            <p class="text-sm text-stone-600">Returns results</p>
+            <div class="w-12 h-12 sm:w-16 sm:h-16 bg-green-100 dark:bg-green-900/30 rounded-xl flex items-center justify-center mx-auto mb-3 sm:mb-4 text-xl sm:text-2xl">✅</div>
+            <h3 class="font-semibold text-[var(--color-text-primary)] mb-1 sm:mb-2 text-sm sm:text-base">Boomerang</h3>
+            <p class="text-xs sm:text-sm text-[var(--color-text-secondary)]">Returns results</p>
           </div>
         </div>
       </div>

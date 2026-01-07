@@ -2,464 +2,118 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Documentation">
-  <section class="py-20">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="text-center mb-16">
-        <h1 class="font-display text-4xl lg:text-5xl font-bold text-stone-900 mb-6">
-          Documentation
-        </h1>
-        <p class="text-xl text-stone-600">
-          Core concepts, contracts, and protocols that power the multi-agent framework.
-        </p>
-      </div>
-
-      <!-- Table of Contents -->
-      <div class="bg-stone-50 rounded-xl p-6 mb-16">
-        <h2 class="font-display text-lg font-semibold text-stone-900 mb-4">Contents</h2>
-        <ul class="space-y-2 text-stone-600">
-          <li><a href="#nervous-system" class="hover:text-copper transition-colors">→ Nervous System Architecture</a></li>
-          <li><a href="#runs-and-steps" class="hover:text-copper transition-colors">→ Runs and Steps</a></li>
-          <li><a href="#boomerang-protocol" class="hover:text-copper transition-colors">→ Boomerang Protocol</a></li>
-          <li><a href="#role-contracts" class="hover:text-copper transition-colors">→ Role Contracts</a></li>
-          <li><a href="#tdd-workflow" class="hover:text-copper transition-colors">→ TDD Workflow</a></li>
-          <li><a href="#parallel-execution" class="hover:text-copper transition-colors">→ Parallel Execution</a></li>
-          <li><a href="#task-maps" class="hover:text-copper transition-colors">→ Task Maps</a></li>
-        </ul>
-      </div>
-
-      <!-- Nervous System Architecture -->
-      <div id="nervous-system" class="mb-16 scroll-mt-24">
-        <h2 class="font-display text-2xl font-bold text-stone-900 mb-6">Nervous System Architecture</h2>
-        <p class="text-stone-600 mb-8">
-          The framework organizes AI capabilities into four biological layers, each with distinct responsibilities and MCP tool integrations.
-        </p>
-        
-        <!-- Central Layer -->
-        <div class="bg-purple-50 rounded-xl p-6 border border-purple-200 mb-6">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="text-2xl">🧠</span>
+<Layout title="Documentation | Agentic Nervous System">
+  <section class="py-12 sm:py-16 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-[var(--color-text-primary)] mb-4 sm:mb-6">
+        Documentation
+      </h1>
+      <p class="text-lg sm:text-xl text-[var(--color-text-secondary)] max-w-3xl mb-10 sm:mb-16">
+        Comprehensive guides for the Agentic Nervous System. From quick starts to deep technical references.
+      </p>
+      
+      <div class="grid gap-6 sm:gap-8 lg:grid-cols-2">
+        <!-- Quick Start -->
+        <a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework/blob/main/templates/quick-start.md" class="block bg-[var(--color-bg-surface)] rounded-2xl border border-[var(--color-border-default)] p-6 sm:p-8 hover:border-[var(--color-brand-primary)] hover:shadow-md transition-all">
+          <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-[var(--color-brand-primary)]/20 rounded-xl flex items-center justify-center text-xl sm:text-2xl">🚀</div>
             <div>
-              <h3 class="font-display text-lg font-semibold text-stone-900">Central Layer: The Brain</h3>
-              <p class="text-sm text-purple-700">High-level cognition and executive function</p>
+              <h2 class="font-display text-lg sm:text-xl font-semibold text-[var(--color-text-primary)]">Quick Start</h2>
+              <span class="text-xs text-[var(--color-text-muted)] uppercase tracking-wide">5 min read</span>
             </div>
           </div>
-          <p class="text-stone-600 mb-4">
-            Goal decomposition, planning, strategic decisions. The Orchestrator coordinates multi-step tasks while Architect and Planner handle system design and task structuring.
-          </p>
-          <div class="text-sm text-stone-500">
-            Modes: Orchestrator • Architect • Planner • Deep Research • Ask
-          </div>
-        </div>
+          <p class="text-[var(--color-text-secondary)] text-sm sm:text-base">Get the framework running in your IDE. Copy-paste setup for Roo Code, Cursor, Claude Code, and Copilot.</p>
+        </a>
         
-        <!-- Somatic Layer -->
-        <div class="bg-amber-50 rounded-xl p-6 border border-amber-200 mb-6">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="text-2xl">🦾</span>
+        <!-- Core Concepts -->
+        <a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework/blob/main/README.md" class="block bg-[var(--color-bg-surface)] rounded-2xl border border-[var(--color-border-default)] p-6 sm:p-8 hover:border-[var(--color-brand-primary)] hover:shadow-md transition-all">
+          <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-purple-100 dark:bg-purple-900/30 rounded-xl flex items-center justify-center text-xl sm:text-2xl">🧠</div>
             <div>
-              <h3 class="font-display text-lg font-semibold text-stone-900">Somatic Layer: The Body</h3>
-              <p class="text-sm text-amber-700">Voluntary motor control and action execution</p>
+              <h2 class="font-display text-lg sm:text-xl font-semibold text-[var(--color-text-primary)]">Core Concepts</h2>
+              <span class="text-xs text-[var(--color-text-muted)] uppercase tracking-wide">10 min read</span>
             </div>
           </div>
-          <p class="text-stone-600 mb-4">
-            Deliberate actions requiring cognitive attention. The <a href="https://github.com/Mnehmos/mnehmos.ooda.mcp" class="text-amber-700 hover:text-amber-900 underline">OODA MCP</a> provides 62+ tools for file operations, screen capture, keyboard/mouse automation, and browser control.
-          </p>
-          <div class="text-sm text-stone-500">
-            Modes: Code • Red Phase • Green Phase • Blue Phase
-          </div>
-        </div>
+          <p class="text-[var(--color-text-secondary)] text-sm sm:text-base">Understand the nervous system architecture, layer model, and contract-driven design principles.</p>
+        </a>
         
-        <!-- Autonomic Layer -->
-        <div class="bg-blue-50 rounded-xl p-6 border border-blue-200 mb-6">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="text-2xl">💭</span>
+        <!-- Mode Reference -->
+        <a href="/mnehmos.multi-agent.framework/team" class="block bg-[var(--color-bg-surface)] rounded-2xl border border-[var(--color-border-default)] p-6 sm:p-8 hover:border-[var(--color-brand-primary)] hover:shadow-md transition-all">
+          <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-amber-100 dark:bg-amber-900/30 rounded-xl flex items-center justify-center text-xl sm:text-2xl">👥</div>
             <div>
-              <h3 class="font-display text-lg font-semibold text-stone-900">Autonomic Layer: The Subconscious</h3>
-              <p class="text-sm text-blue-700">Background processes that maintain state without conscious attention</p>
+              <h2 class="font-display text-lg sm:text-xl font-semibold text-[var(--color-text-primary)]">Mode Reference</h2>
+              <span class="text-xs text-[var(--color-text-muted)] uppercase tracking-wide">Reference</span>
             </div>
           </div>
-          <p class="text-stone-600 mb-4">
-            Memory persistence, agent coordination, semantic retrieval. The <a href="https://github.com/Mnehmos/mnehmos.synch.mcp" class="text-blue-700 hover:text-blue-900 underline">Synch MCP</a> handles cross-session context while <a href="https://github.com/Mnehmos/mnehmos.index-foundry.mcp" class="text-blue-700 hover:text-blue-900 underline">Index Foundry</a> provides RAG pipelines for semantic memory.
-          </p>
-          <div class="grid md:grid-cols-2 gap-4 mt-4">
-            <a href="https://github.com/Mnehmos/mnehmos.synch.mcp" class="bg-white rounded-lg p-4 border border-blue-100 hover:border-blue-300 transition-colors">
-              <div class="flex items-center gap-2 mb-2">
-                <span>💾</span>
-                <span class="font-semibold text-stone-900">Synch MCP</span>
-              </div>
-              <p class="text-sm text-stone-600">Memory persistence, agent handoff, locks, bug tracking</p>
-            </a>
-            <a href="https://github.com/Mnehmos/mnehmos.index-foundry.mcp" class="bg-white rounded-lg p-4 border border-blue-100 hover:border-blue-300 transition-colors">
-              <div class="flex items-center gap-2 mb-2">
-                <span>📚</span>
-                <span class="font-semibold text-stone-900">Index Foundry</span>
-              </div>
-              <p class="text-sm text-stone-600">RAG pipelines, document Q&A, semantic search</p>
-            </a>
-          </div>
-        </div>
+          <p class="text-[var(--color-text-secondary)] text-sm sm:text-base">Detailed documentation for all 13 specialized modes. Capabilities, constraints, and usage patterns.</p>
+        </a>
         
-        <!-- Reflex Layer -->
-        <div class="bg-red-50 rounded-xl p-6 border border-red-200 mb-6">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="text-2xl">⚡</span>
+        <!-- MCP Integration -->
+        <a href="/mnehmos.multi-agent.framework/tools" class="block bg-[var(--color-bg-surface)] rounded-2xl border border-[var(--color-border-default)] p-6 sm:p-8 hover:border-[var(--color-brand-primary)] hover:shadow-md transition-all">
+          <div class="flex items-center gap-3 sm:gap-4 mb-3 sm:mb-4">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 bg-blue-100 dark:bg-blue-900/30 rounded-xl flex items-center justify-center text-xl sm:text-2xl">🔧</div>
             <div>
-              <h3 class="font-display text-lg font-semibold text-stone-900">Reflex Layer: The Spinal Cord</h3>
-              <p class="text-sm text-red-700">Immediate, pre-cognitive responses</p>
+              <h2 class="font-display text-lg sm:text-xl font-semibold text-[var(--color-text-primary)]">MCP Integration</h2>
+              <span class="text-xs text-[var(--color-text-muted)] uppercase tracking-wide">Reference</span>
             </div>
           </div>
-          <p class="text-stone-600 mb-4">
-            Schema validation that rejects bad inputs before they reach the brain. The <a href="https://github.com/Mnehmos/mnehmos.trace.mcp" class="text-red-700 hover:text-red-900 underline">Trace MCP</a> catches contract violations at edit time, not runtime.
-          </p>
-          <div class="bg-white rounded-lg p-4 border border-red-100">
-            <div class="flex items-center gap-2 mb-2">
-              <span>🔍</span>
-              <span class="font-semibold text-stone-900">Validation Before Execution</span>
-            </div>
-            <p class="text-sm text-stone-600">In combat, soldiers don't think—they react. In code, the reflex layer validates tool inputs, enforces contracts, and rejects malformed requests—all without consuming cognitive resources.</p>
-          </div>
-        </div>
+          <p class="text-[var(--color-text-secondary)] text-sm sm:text-base">How to integrate Model Context Protocol tools with the framework. OODA, Synch, Index Foundry, and Trace.</p>
+        </a>
       </div>
-
-      <!-- Runs and Steps -->
-      <div id="runs-and-steps" class="mb-16 scroll-mt-24">
-        <h2 class="font-display text-2xl font-bold text-stone-900 mb-6">Runs and Steps</h2>
-        <p class="text-stone-600 mb-6">
-          All agents operate as part of a structured runtime. Each unit of work is organized into runs and steps.
-        </p>
+      
+      <!-- Technical Deep Dives -->
+      <h2 class="font-display text-xl sm:text-2xl font-bold text-[var(--color-text-primary)] mt-10 sm:mt-16 mb-6 sm:mb-8">Technical Deep Dives</h2>
+      
+      <div class="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework/blob/main/templates/custom-instructions-for-all-modes.md" class="block bg-[var(--color-bg-elevated)] rounded-xl border border-[var(--color-border-default)] p-5 sm:p-6 hover:border-[var(--color-text-muted)] transition-colors">
+          <h3 class="font-display text-base sm:text-lg font-semibold text-[var(--color-text-primary)] mb-2">Contract System</h3>
+          <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">Runs, steps, boomerang protocol, and parallel safety guarantees.</p>
+        </a>
         
-        <div class="bg-white rounded-xl border border-stone-200 p-6 mb-6">
-          <h3 class="font-semibold text-stone-900 mb-4">Run Structure</h3>
-          <div class="bg-stone-900 rounded-lg p-4 overflow-x-auto">
-            <pre class="text-stone-300 text-sm"><code>{`{
-  "run_id": "uuid-v7",
-  "objective": "Implement user authentication",
-  "status": "running",  // pending | running | completed | failed | blocked
-  "steps": [
-    { "type": "reasoning", "content": "Analyzing requirements..." },
-    { "type": "tool", "name": "read_file", "params": {...} },
-    { "type": "delegate", "to": "code", "task": {...} }
-  ]
-}`}</code></pre>
-          </div>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-4">
-          <div class="bg-stone-50 rounded-lg p-4">
-            <h4 class="font-semibold text-stone-900 mb-2">reasoning</h4>
-            <p class="text-sm text-stone-600">Internal planning and analysis steps</p>
-          </div>
-          <div class="bg-stone-50 rounded-lg p-4">
-            <h4 class="font-semibold text-stone-900 mb-2">tool</h4>
-            <p class="text-sm text-stone-600">Real tool invocation (file ops, MCP, etc.)</p>
-          </div>
-          <div class="bg-stone-50 rounded-lg p-4">
-            <h4 class="font-semibold text-stone-900 mb-2">delegate</h4>
-            <p class="text-sm text-stone-600">Assign work to another agent mode</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Boomerang Protocol -->
-      <div id="boomerang-protocol" class="mb-16 scroll-mt-24">
-        <h2 class="font-display text-2xl font-bold text-stone-900 mb-6">Boomerang Protocol</h2>
-        <p class="text-stone-600 mb-6">
-          Any agent receiving a delegated task returns a structured payload to the orchestrator.
-        </p>
+        <a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework/blob/main/templates/custom_modes.yaml" class="block bg-[var(--color-bg-elevated)] rounded-xl border border-[var(--color-border-default)] p-5 sm:p-6 hover:border-[var(--color-text-muted)] transition-colors">
+          <h3 class="font-display text-base sm:text-lg font-semibold text-[var(--color-text-primary)] mb-2">Mode Definitions</h3>
+          <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">YAML specification for all 13 modes with layer mappings.</p>
+        </a>
         
-        <div class="bg-white rounded-xl border border-stone-200 p-6 mb-6">
-          <h3 class="font-semibold text-stone-900 mb-4">Return Payload Schema</h3>
-          <div class="bg-stone-900 rounded-lg p-4 overflow-x-auto">
-            <pre class="text-stone-300 text-sm"><code>{`{
-  "type": "task-completed",  // or escalation | review-approved | review-rejected
-  "task_id": "task-001",
-  "run_id": "run-uuid",
-  "from": "code",
-  "to": "orchestrator",
-  "status": "success",  // success | failed | blocked
-  "files_changed": ["src/auth.ts", "tests/auth.test.ts"],
-  "tests_run": ["npm test -- auth"],
-  "summary": "Implemented JWT authentication with refresh tokens",
-  "notes": "Consider adding rate limiting in future iteration"
-}`}</code></pre>
-          </div>
-        </div>
-
-        <div class="bg-amber-50 border border-amber-200 rounded-lg p-4">
-          <div class="flex gap-3">
-            <svg class="w-5 h-5 text-amber-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path>
-            </svg>
-            <div>
-              <h4 class="font-semibold text-amber-800">Escalation</h4>
-              <p class="text-sm text-amber-700">When blocked, use <code class="bg-amber-100 px-1 rounded">type: "escalation"</code> and describe what blocked you, what you attempted, and concrete options for resolution.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Role Contracts -->
-      <div id="role-contracts" class="mb-16 scroll-mt-24">
-        <h2 class="font-display text-2xl font-bold text-stone-900 mb-6">Role Contracts</h2>
-        <p class="text-stone-600 mb-6">
-          Each agent role has specific responsibilities and constraints.
-        </p>
+        <a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework/blob/main/templates/universal/AGENTS.md" class="block bg-[var(--color-bg-elevated)] rounded-xl border border-[var(--color-border-default)] p-5 sm:p-6 hover:border-[var(--color-text-muted)] transition-colors">
+          <h3 class="font-display text-base sm:text-lg font-semibold text-[var(--color-text-primary)] mb-2">AGENTS.md Standard</h3>
+          <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">Universal agent configuration that works across all IDEs.</p>
+        </a>
         
-        <div class="space-y-6">
-          <div class="bg-white rounded-xl border border-stone-200 p-6">
-            <h3 class="font-display text-lg font-semibold text-stone-900 mb-4 flex items-center gap-2">
-              <span class="text-xl">🔄</span> Orchestrator
-            </h3>
-            <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <h4 class="font-semibold text-green-700 mb-2">MUST</h4>
-                <ul class="space-y-1 text-sm text-stone-600">
-                  <li>• Interpret user goals and constraints</li>
-                  <li>• Create and maintain Task Maps</li>
-                  <li>• Decompose work into atomic subtasks</li>
-                  <li>• Assign workspace_path and file_patterns</li>
-                  <li>• Consume boomerang payloads</li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="font-semibold text-red-700 mb-2">MUST NOT</h4>
-                <ul class="space-y-1 text-sm text-stone-600">
-                  <li>• Directly edit project files</li>
-                  <li>• Run destructive commands</li>
-                  <li>• Bypass contracts</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl border border-stone-200 p-6">
-            <h3 class="font-display text-lg font-semibold text-stone-900 mb-4 flex items-center gap-2">
-              <span class="text-xl">💻</span> Worker (Code, Red/Green/Blue Phase)
-            </h3>
-            <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <h4 class="font-semibold text-green-700 mb-2">MUST</h4>
-                <ul class="space-y-1 text-sm text-stone-600">
-                  <li>• Operate within assigned workspace_path</li>
-                  <li>• Respect file_patterns constraints</li>
-                  <li>• Implement exactly the subtask objective</li>
-                  <li>• Add/update tests when appropriate</li>
-                  <li>• Return boomerang payloads</li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="font-semibold text-red-700 mb-2">MUST NOT</h4>
-                <ul class="space-y-1 text-sm text-stone-600">
-                  <li>• Modify files outside scope</li>
-                  <li>• Ignore acceptance criteria</li>
-                  <li>• Silently expand scope</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-xl border border-stone-200 p-6">
-            <h3 class="font-display text-lg font-semibold text-stone-900 mb-4 flex items-center gap-2">
-              <span class="text-xl">👁️</span> Reviewer
-            </h3>
-            <div class="grid md:grid-cols-2 gap-6">
-              <div>
-                <h4 class="font-semibold text-green-700 mb-2">MUST</h4>
-                <ul class="space-y-1 text-sm text-stone-600">
-                  <li>• Be read-only</li>
-                  <li>• Review only relevant changes</li>
-                  <li>• Return review-approved or review-rejected</li>
-                  <li>• Provide structured feedback</li>
-                </ul>
-              </div>
-              <div>
-                <h4 class="font-semibold text-red-700 mb-2">MUST NOT</h4>
-                <ul class="space-y-1 text-sm text-stone-600">
-                  <li>• Edit files</li>
-                  <li>• Provide vague approvals</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- TDD Workflow -->
-      <div id="tdd-workflow" class="mb-16 scroll-mt-24">
-        <h2 class="font-display text-2xl font-bold text-stone-900 mb-6">TDD Workflow</h2>
-        <p class="text-stone-600 mb-6">
-          The framework enforces Test-Driven Development through three distinct phases:
-        </p>
+        <a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework/blob/main/templates/tools/ooda-mcp.md" class="block bg-[var(--color-bg-elevated)] rounded-xl border border-[var(--color-border-default)] p-5 sm:p-6 hover:border-[var(--color-text-muted)] transition-colors">
+          <h3 class="font-display text-base sm:text-lg font-semibold text-[var(--color-text-primary)] mb-2">OODA MCP Deep Dive</h3>
+          <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">62 tools for computer automation. Complete API reference.</p>
+        </a>
         
-        <div class="space-y-6">
-          <div class="bg-red-50 rounded-xl p-6 border border-red-100">
-            <div class="flex items-center gap-4 mb-4">
-              <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center text-2xl">🔴</div>
-              <div>
-                <h3 class="font-display text-lg font-semibold text-stone-900">Red Phase</h3>
-                <p class="text-sm text-red-700">Tests must fail with clear messages</p>
-              </div>
-            </div>
-            <ul class="space-y-2 text-sm text-stone-600">
-              <li>• Write test specifications before implementation</li>
-              <li>• Define expected behavior through assertions</li>
-              <li>• Create test fixtures and mocks</li>
-              <li>• Verify tests fail for the right reasons</li>
-            </ul>
-          </div>
-
-          <div class="bg-green-50 rounded-xl p-6 border border-green-100">
-            <div class="flex items-center gap-4 mb-4">
-              <div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center text-2xl">🟢</div>
-              <div>
-                <h3 class="font-display text-lg font-semibold text-stone-900">Green Phase</h3>
-                <p class="text-sm text-green-700">Write minimal code focused on correctness</p>
-              </div>
-            </div>
-            <ul class="space-y-2 text-sm text-stone-600">
-              <li>• Implement just enough to pass tests</li>
-              <li>• No premature optimization</li>
-              <li>• All red phase tests must turn green</li>
-              <li>• Quick iterations toward passing state</li>
-            </ul>
-          </div>
-
-          <div class="bg-blue-50 rounded-xl p-6 border border-blue-100">
-            <div class="flex items-center gap-4 mb-4">
-              <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-2xl">🔵</div>
-              <div>
-                <h3 class="font-display text-lg font-semibold text-stone-900">Blue Phase</h3>
-                <p class="text-sm text-blue-700">Improve quality while maintaining passing tests</p>
-              </div>
-            </div>
-            <ul class="space-y-2 text-sm text-stone-600">
-              <li>• Refactor for readability and maintainability</li>
-              <li>• Optimize performance where needed</li>
-              <li>• Polish output formatting</li>
-              <li>• Tests must remain green throughout</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Parallel Execution -->
-      <div id="parallel-execution" class="mb-16 scroll-mt-24">
-        <h2 class="font-display text-2xl font-bold text-stone-900 mb-6">Parallel Execution</h2>
-        <p class="text-stone-600 mb-6">
-          Parallelism is allowed only when safe by construction through workspace and file isolation.
-        </p>
+        <a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework/blob/main/templates/tools/synch-mcp.md" class="block bg-[var(--color-bg-elevated)] rounded-xl border border-[var(--color-border-default)] p-5 sm:p-6 hover:border-[var(--color-text-muted)] transition-colors">
+          <h3 class="font-display text-base sm:text-lg font-semibold text-[var(--color-text-primary)] mb-2">Synch MCP Deep Dive</h3>
+          <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">Memory persistence, agent coordination, and context handoff.</p>
+        </a>
         
-        <div class="bg-white rounded-xl border border-stone-200 p-6 mb-6">
-          <h3 class="font-semibold text-stone-900 mb-4">Safety Rules</h3>
-          <ul class="space-y-3 text-stone-600">
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-green-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              <span><strong>Non-overlapping workspace_path:</strong> Tasks with different workspace roots can run in parallel</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-green-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-              </svg>
-              <span><strong>Disjoint file_patterns:</strong> Tasks with non-conflicting file patterns in the same workspace can run in parallel</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <svg class="w-5 h-5 text-red-600 shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
-              </svg>
-              <span><strong>Any doubt = conflict:</strong> Serialize or rescope to eliminate potential race conditions</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="bg-stone-900 rounded-xl p-6 overflow-x-auto">
-          <pre class="text-stone-300 text-sm"><code>{`// Example: Parallel-safe task assignment
-{
-  "tasks": [
-    {
-      "task_id": "frontend-auth",
-      "mode": "code",
-      "workspace_path": "src/components/",
-      "file_patterns": ["Auth*.tsx", "Login*.tsx"]
-    },
-    {
-      "task_id": "backend-auth", 
-      "mode": "code",
-      "workspace_path": "src/api/",
-      "file_patterns": ["auth*.ts", "jwt*.ts"]
-    }
-  ]
-  // These can run in parallel - different workspace_path values
-}`}</code></pre>
-        </div>
+        <a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework/blob/main/templates/tools/index-foundry-mcp.md" class="block bg-[var(--color-bg-elevated)] rounded-xl border border-[var(--color-border-default)] p-5 sm:p-6 hover:border-[var(--color-text-muted)] transition-colors">
+          <h3 class="font-display text-base sm:text-lg font-semibold text-[var(--color-text-primary)] mb-2">Index Foundry Deep Dive</h3>
+          <p class="text-[var(--color-text-secondary)] text-xs sm:text-sm">RAG pipelines, chunking strategies, and semantic search.</p>
+        </a>
       </div>
-
-      <!-- Task Maps -->
-      <div id="task-maps" class="mb-16 scroll-mt-24">
-        <h2 class="font-display text-2xl font-bold text-stone-900 mb-6">Task Maps</h2>
-        <p class="text-stone-600 mb-6">
-          Planner generates Task Maps that define the complete scope of work with dependencies.
-        </p>
-        
-        <div class="bg-white rounded-xl border border-stone-200 p-6 mb-6">
-          <h3 class="font-semibold text-stone-900 mb-4">Task Map Structure</h3>
-          <div class="bg-stone-900 rounded-lg p-4 overflow-x-auto">
-            <pre class="text-stone-300 text-sm"><code>{`{
-  "objective": "Implement user authentication system",
-  "tasks": [
-    {
-      "task_id": "auth-001",
-      "title": "Design auth schema",
-      "mode": "architect",
-      "deps": [],
-      "acceptance_criteria": [
-        "ADR documenting auth approach",
-        "Database schema for users table",
-        "API contract for auth endpoints"
-      ]
-    },
-    {
-      "task_id": "auth-002", 
-      "title": "Write auth tests",
-      "mode": "red-phase",
-      "deps": ["auth-001"],
-      "workspace_path": "tests/",
-      "file_patterns": ["auth.test.ts"]
-    },
-    {
-      "task_id": "auth-003",
-      "title": "Implement auth",
-      "mode": "green-phase", 
-      "deps": ["auth-002"],
-      "workspace_path": "src/",
-      "file_patterns": ["auth/*.ts"]
-    }
-  ]
-}`}</code></pre>
-          </div>
-        </div>
-      </div>
-
-      <!-- Resources -->
-      <div class="bg-stone-900 rounded-2xl p-8 text-stone-50">
-        <h2 class="font-display text-2xl font-bold mb-6">Additional Resources</h2>
-        <div class="grid md:grid-cols-2 gap-6">
-          <a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework" class="bg-stone-800 rounded-xl p-6 hover:bg-stone-700 transition-colors">
-            <h3 class="font-semibold mb-2">GitHub Repository</h3>
-            <p class="text-sm text-stone-400">Full source code, templates, and examples</p>
+      
+      <!-- GitHub Resources -->
+      <div class="mt-10 sm:mt-16 bg-[var(--color-footer-bg)] rounded-2xl p-6 sm:p-8">
+        <h2 class="font-display text-xl sm:text-2xl font-bold text-[var(--color-text-inverse)] mb-4 sm:mb-6">GitHub Resources</h2>
+        <div class="grid gap-4 sm:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework" class="block bg-[var(--color-bg-elevated)] rounded-xl p-4 sm:p-5 hover:bg-[var(--color-bg-muted)] transition-colors">
+            <h3 class="font-semibold text-[var(--color-text-inverse)] mb-1 text-sm sm:text-base">Main Repository</h3>
+            <p class="text-[var(--color-footer-text)] text-xs sm:text-sm">Framework source, templates, and documentation.</p>
           </a>
-          <a href="/mnehmos.multi-agent.framework/team" class="bg-stone-800 rounded-xl p-6 hover:bg-stone-700 transition-colors">
-            <h3 class="font-semibold mb-2">Agent Reference</h3>
-            <p class="text-sm text-stone-400">Detailed capabilities for each agent</p>
+          
+          <a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework/issues" class="block bg-[var(--color-bg-elevated)] rounded-xl p-4 sm:p-5 hover:bg-[var(--color-bg-muted)] transition-colors">
+            <h3 class="font-semibold text-[var(--color-text-inverse)] mb-1 text-sm sm:text-base">Issue Tracker</h3>
+            <p class="text-[var(--color-footer-text)] text-xs sm:text-sm">Report bugs or request features.</p>
           </a>
-          <a href="/mnehmos.multi-agent.framework/tools" class="bg-stone-800 rounded-xl p-6 hover:bg-stone-700 transition-colors">
-            <h3 class="font-semibold mb-2">MCP Tools</h3>
-            <p class="text-sm text-stone-400">Extend capabilities with MCP servers</p>
-          </a>
-          <a href="/mnehmos.multi-agent.framework/templates" class="bg-stone-800 rounded-xl p-6 hover:bg-stone-700 transition-colors">
-            <h3 class="font-semibold mb-2">IDE Templates</h3>
-            <p class="text-sm text-stone-400">Pre-configured setups for your editor</p>
+          
+          <a href="https://github.com/Mnehmos/mnehmos.multi-agent.framework/discussions" class="block bg-[var(--color-bg-elevated)] rounded-xl p-4 sm:p-5 hover:bg-[var(--color-bg-muted)] transition-colors">
+            <h3 class="font-semibold text-[var(--color-text-inverse)] mb-1 text-sm sm:text-base">Discussions</h3>
+            <p class="text-[var(--color-footer-text)] text-xs sm:text-sm">Ask questions and share ideas.</p>
           </a>
         </div>
       </div>
